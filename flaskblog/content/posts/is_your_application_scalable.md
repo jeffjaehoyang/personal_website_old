@@ -2,6 +2,7 @@ author: Jeff Yang
 title: Shipping Code for a Business – Is Your Application Scalable?
 published: 2019-09-09
 category: Internship
+summary: Reflecting back on 2019 Summer SWE internship at Knowru. 
 
 Summer 2019 Knowru SWE Internship
 
@@ -15,4 +16,5 @@ Through an API request, fetch JSON data containing specifications needed to dyna
 Store the specifications in the state of the application (Redux)
 For each React component, fetch necessary data needed and pass it as a prop
 Now we are fully equipped to render any page / component dynamically as long as we have the specifications provided by the company!
+
 With the above, our application was now able to support any number of companies and loan products, just as long as we had the information provided by each company on what they wanted included in their own customized web application. The re-designing process was not too difficult or complicated, but I realized how important thinking out the design of the software is, especially when shipping code for business purposes. At the end, software engineers exist to solve complicated technical problems, and building a scalable product is integral for the final product to have a greater impact on the world.

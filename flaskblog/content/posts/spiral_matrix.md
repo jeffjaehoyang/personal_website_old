@@ -2,6 +2,7 @@ author: Jeff Yang
 title: Spiral Matrix – Brain Teaser Series
 category: Algorithms
 published: 2019-09-21
+summary: Some JavaScript code on how to solve the famous "spiral matrix" problem
 
 This is going to be the first of the “Brain Teaser” series, where I will be writing posts on the so-called “whiteboard interview questions” that I thought were interesting. This first post of the series is going to be about the “Spiral Matrix” problem, where you need to write a function that accepts an integer N and returns a N\*N spiral matrix.
 Problem Statement: Write a function that accepts an integer N and returns a N\*N spiral matrix.
@@ -10,13 +11,11 @@ The problem statement itself may not paint a clear picture of what we are dealin
 spiralMatrix(4)
 ![spiralMatrix(4)](../../static/upload/spiral_matrix_1.png)<br>
 
-Hopefully, the picture above was clear enough to give you a good idea of what our function is supposed to do. Essentially, the function `spiralMatrix(n)` needs to produce a n\*n matrix that spirals inwards. The question may seem a bit daunting at first, but we’ll go through it step by step.
+Hopefully, the picture above was clear enough to give you a good idea of what our function is supposed to do. Essentially, the function `spiralMatrix(n)` needs to produce a n\*n matrix that spirals inwards. The question may seem a bit daunting at first, but we’ll go through it step by step.<br><br>
+1. Notice that we are dealing with a 2D Array
 
-<1> Notice that we are dealing with a 2D Array
-
-This problem can be challenging to even start because it does not directly say what type of data structure we are dealing with. To begin discussing the solution to this problem, we need to be very clear on the fact that the matrix shown above is essentially a 2D array, where there are multiple arrays within an array.
-
-<2> How will we populate the 2d array, spiraling inwards?
+This problem can be challenging to even start because it does not directly say what type of data structure we are dealing with. To begin discussing the solution to this problem, we need to be very clear on the fact that the matrix shown above is essentially a 2D array, where there are multiple arrays within an array.<br><br>
+2. How will we populate the 2d array, spiraling inwards?
 
 Take a look at the following diagram:
 ![spiralMatrix](../../static/upload/spiral_matrix_2.png)<br>

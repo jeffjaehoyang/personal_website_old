@@ -45,10 +45,10 @@
 
 	<main role="main" class="container">
 	  <div class="row">
-	  	{% if '/post/' in request.path or '/contact' in request.path or '/resume' in request.path %}
+	  	{% if '/post/' in request.path or '/contact' in request.path %}
 	  		<div class="col-md-8" style="float:none; margin:auto;">
 	  	{% else %}
-	    	<div class="col-md-8">
+	    	<div class="col-md-9" style="float:none; margin:auto;">
 	    {% endif %}
 	      {% with messages = get_flashed_messages(with_categories=true) %}
 	      	{% if messages %}
@@ -64,22 +64,6 @@
 	      {% endwith %}
 	      {% block content %}{% endblock %}
 	    </div>
-	    {% if request.path in (url_for('blog'), url_for('home'), url_for('about')) %}
-		    <div class="col-md-4">
-		      <div class="content-section">
-		        <h3>About Jeff</h3>
-		        <img src="../static/gazing2.jpg" width="300" height="300" style="border-radius:50%;">
-		        <hr>
-		        <p class='text-muted'>
-		        	Welcome to my blog! <br><br>
-		        	I am a student majoring in Computer Science at Northwestern University. <br><br>
-		        	Passionate about technology and making the world a better place for all. <br><br>
-		        	You can also find me on <a href="https://www.linkedin.com/in/jaeho-yang/">LinkedIn</a>. <br><br>
-		        	Thank you for visiting!
-		        </p>
-		      </div>
-		    </div>
-		{% endif %}
 	  </div>
 	</main>
 	<hr>
@@ -88,11 +72,11 @@
 	  		<a class="footer" href="https://www.linkedin.com/in/jaeho-yang/">
 	  			<i class="fab fa-linkedin fa-lg"></i>
 	  		</a> &nbsp;&nbsp;
-	  		<a class="footer" href="https://www.linkedin.com/in/jaeho-yang/">
+	  		<a class="footer" href="https://github.com/jeffjaehoyang">
 	  			<i class="fab fa-github fa-lg"></i>
 	  		</a> &nbsp;&nbsp;
-	  		<a class="footer" href="https://www.linkedin.com/in/jaeho-yang/">
-	  			<i class="fab fa-facebook fa-lg"></i>
+	  		<a class="footer" href="https://www.instagram.com/jefe.yang/">
+	  			<i class="fab fa-instagram fa-lg"></i>
 	  		</a> &nbsp;&nbsp; | &nbsp;&nbsp;
 	  		<span class="footer">
 	  			<i class="fa fa-python"></i>

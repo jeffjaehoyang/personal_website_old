@@ -15,11 +15,12 @@
 		<article class="media content-section">
 		  <div class="media-body">
 		    <div class="article-metadata">
-		      <a class="mr-2" href="#">{{ post.author }}</a>
+		      <a class="mr-2">{{ post.author }}</a>
 		      <small class="text-muted">{{ post.published }}</small>
 		    </div>
 		    <h3><a class="article-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a></h3>
-		    <p class="article-content">Category: <strong>{{ post.category }}</strong></p>
+		    Category: <strong>{{ post.category }}</strong><br>
+		    {{ post.summary }}
 		  </div>
 		</article>
 	{% endfor %}

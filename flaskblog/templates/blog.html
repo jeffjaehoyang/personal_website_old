@@ -1,0 +1,22 @@
+{% extends "layouts.html" %}
+{% block content %}
+	{% for post in posts %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <a class="mr-2" href="#">{{ post.author }}</a>
+		      <small class="text-muted">{{ post.published }}</small>
+		    </div>
+		    <h3><a class="article-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a></h3>
+		    <p class="article-content">Category: <strong>{{ post.category }}</strong></p>
+		    {% if post.body|length > 200 %}
+		    	<p class="article-content">{{ post.body[:100] }} &nbsp;&nbsp;... 
+		    		<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">read more</a>
+		    	</p>   	
+		    {% else %}
+		    	<p class="article-content">{{ post.body }}</p>
+		    {% endif %}
+		  </div>
+		</article>
+	{% endfor %}
+{% endblock %} 

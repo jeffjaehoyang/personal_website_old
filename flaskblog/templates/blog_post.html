@@ -1,0 +1,7 @@
+{% extends "layouts.html" %}
+{% block content %}
+	<h3><strong>{{ post.title }}</strong></h3>
+	Category: <strong>{{ post.category }}</strong><br>
+	Published: {{ post.published }}<br><br>
+	{{ post.html|safe }}	
+{% endblock %} 

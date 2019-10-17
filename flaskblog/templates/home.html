@@ -1,0 +1,33 @@
+{% extends "layouts.html" %}
+{% block content %}
+	<h3>Welcome to my blog!</h3><br>
+	<p>Hi, my name is Jeff, a 23 year old college student studying computer science. I'm always looking for ways to make an impact on this world. <br><br>
+
+	Seoul and Chicago are the two cities to go look for me, as I’m a Seoulite attending Northwestern University (Evanston).
+	<br><br>
+
+	Passionate about software engineering, managing a healthy lifestyle, and a diehard Liverpool fan, I hope this website opens up opportunities to learn from the world. Thanks for stopping by, and hopefully, enjoy!</p>
+
+	<hr>
+	<h3>Recent Posts</h3>
+	<br>
+	{% for post in posts %}
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <a class="mr-2" href="#">{{ post.author }}</a>
+		      <small class="text-muted">{{ post.published }}</small>
+		    </div>
+		    <h3><a class="article-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a></h3>
+		    <p class="article-content">Category: <strong>{{ post.category }}</strong></p>
+		  </div>
+		</article>
+	{% endfor %}
+	
+	<hr>
+	<h3> Food for Thought </h3><br>
+	<p>“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” - Aristotle</p><br>
+	<p>“When you tell a lie, you steal someone’s right to the truth.” - Khaled Hosseini</p><br>
+	<p>“No one is useless in this world who lightens the burdens of another.” - Charles Dickens</p><br>
+	<p>“Success is not final, failure is not fatal: it is the courage to continue that counts.” - Winston Churchill</p><br>
+{% endblock %} 

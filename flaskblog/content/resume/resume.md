@@ -18,7 +18,7 @@ Software Engineer, Intern
 	<li>Built web application “video-kyc” using React/Redux/Node.js to aid loan processing companies in making loan decisions through foolproof verification</li>
 	<li>Designed the architecture of application through creating a system of modular React components and integrating them with API calls to fetch real-time customer data, resulting in greater scalability and customizability </li>
 	<li>Implemented an application-embedded video call system between loan agent and loan applicant using WebRTC</li>
-	<li>Expedited the integration of application in China by enabling video-call screen rendering on iOS mobile devices by identifying and debugging outdated legacy JavaScript code, while working in Chonqing office</li>
+	<li>Expedited the integration of application in China by enabling video-call screen rendering on iOS mobile devices by identifying and debugging outdated legacy JavaScript code, while working in Chongqing office</li>
 	<li><strong>Leveraged Knowledge in</strong> Git, JavaScript, WebRTC, Flask RESTful APIs, and debugged using Chrome Developer Tools</li>
 </ul>
 

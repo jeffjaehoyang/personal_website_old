@@ -6,7 +6,6 @@ title: Resume
 **Northwestern University**	(Expected Graduation: 06/2021)  
 <ul>
 	<li>Major: Computer Science, B.A</li> 
-	<li>GPA: 3.91/4.00</li>
 	<li>Programming Coursework: Introduction to Computer Systems, Data Structure & Management, Human Computer Interaction, Data Management & Information Processing</li>
 </ul>
 <br>

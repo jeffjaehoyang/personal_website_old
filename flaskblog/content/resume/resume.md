@@ -1,5 +1,6 @@
 author: Jeff Yang
 title: Resume
+category: None
 
 <h4>Education</h4>
 <hr>

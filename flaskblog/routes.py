@@ -113,3 +113,10 @@ def post(name):
     path = '{}/{}'.format(Config.POST_DIR, name)
     post = flatpages.get_or_404(path)
     return render_template('blog_post.html', post=post)
+
+@current_app.route('/category/<name>')
+def category(name):
+    posts = [p for p in flatpages if name in p.meta['category']]
+    posts.sort(key=lambda item:item['published'], reverse=True)
+    return render_template('blog.html', posts=posts)
+

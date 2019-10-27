@@ -5,7 +5,9 @@
 		<form method="POST" action="" novalidate>
 			{{ form.hidden_tag() }}
 			<fieldset class="form-group">
-				<legend class="border-bottom mb-4">Hi there, don't be shy!</legend>
+				<legend class="border-bottom mb-4">Hi there!<br>
+					<span style="font-size: 15px;">Interested in talking to me, or have any suggestions? Please feel free to reach out!</span>
+				</legend>
 				<div class="form-group">
 					{{ form.name.label(class="form-control-label") }}
 					{% if form.name.errors %}
@@ -59,7 +61,7 @@
 					{% endif %}
 				</div>
 			</fieldset>
-			<div class="form-group">
+			<div class="form-group text-right">
 				{{ form.send(class="btn btn-outline-dark") }}
 			</div>
 		</form>

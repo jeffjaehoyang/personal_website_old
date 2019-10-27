@@ -221,7 +221,7 @@ To customize how your code block looks, do something like this:
 $ pygmentize -L
 ```
 <br>
-The above code will print a list of built in themes available for your code blocks. To checkout what the different themes look like (or customize the css based on your personal needs), run the following command inside `my_flask_app` directory: 
+The above code will print a list of built in themes available for your code blocks. To check out what the different themes look like (or customize the css based on your personal needs), run the following command inside `my_flask_app` directory: 
 ```console
 $ mkdir static
 $ cd static
@@ -243,12 +243,12 @@ You should be able to see that a new pygs.css file is created inside the `static
 ...
 ```
 <br>
-That should do it. We finally have the backbones of a functional blog built with Flask! Let's do a short recap of what we went through.  
+That should do it. We finally have the backbones of a functional personal blog built with Flask! Let's do a short recap of what we went through.  
 
 - Created a virtual environment before we started to install anything needed to build this blog
 - Initialized a very basic Flask application
 - Created simple HTML templates powered by Jinja2
-- Learned how to serve static Markdown files through the HTML templates using Flask-Flatpages
+- Went through how to serve static Markdown files through the HTML templates using Flask-Flatpages
 - How to insert prettified code blocks into our blog posts through some simple configurations of FlatPages-Markdown-Codehilite-Pygments <br>
 </ul>
 Congratulations! Now we are cookin' with Flask!

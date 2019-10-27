@@ -45,10 +45,10 @@
 
 	<main role="main" class="container">
 	  <div class="row">
-	  	{% if '/post/' in request.path or '/contact' in request.path %}
+	  	{% if '/contact' in request.path %}
 	  		<div class="col-md-8" style="float:none; margin:auto;">
 	  	{% else %}
-	    	<div class="col-md-9" style="float:none; margin:auto;">
+	    	<div class="col-md-10" style="float:none; margin:auto;">
 	    {% endif %}
 	      {% with messages = get_flashed_messages(with_categories=true) %}
 	      	{% if messages %}

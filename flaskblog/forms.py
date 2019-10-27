@@ -43,10 +43,10 @@ class LoginForm(FlaskForm):
     login = SubmitField('Login')
 
 class ContactForm(FlaskForm):
-    name = StringField('Name',
+    name = StringField('Your Name',
                        validators=[DataRequired()])
 
-    email = StringField('Email',
+    email = StringField('Your Email',
                         validators=[DataRequired(), Email()])
 
     subject = StringField('Subject',

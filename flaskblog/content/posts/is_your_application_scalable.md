@@ -1,8 +1,9 @@
 author: Jeff Yang
 title: Shipping Code for a Business – Is Your Application Scalable?
 published: 2019-09-09
-category: Internship
+category: [Internship]
 summary: Reflecting back on 2019 Summer SWE internship at Knowru. 
+minread: 3 mins
 
 Summer 2019 Knowru SWE Internship
 

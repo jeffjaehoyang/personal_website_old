@@ -14,15 +14,9 @@
 		    </h3>
 		    <i class="fas fa-tags fa-sm"></i> 
 		    {% for category in post.category %}
-		    	{% if loop.index < post.category|length %}
-		    		<a href="{{ url_for('category', name=category)}}">
-    			        <strong>{{ category }}</strong>
-    		        </a>,
-		    	{% else %}
-		    	    <a href="{{ url_for('category', name=category)}}">
-    			        <strong>{{ category }}</strong>
-    		        </a>
-		    	{% endif %}  
+	    	    <a href="{{ url_for('category', name=category)}}" class="badge badge-pill badge-secondary">
+			        {{ category }}
+		        </a>  
 			{% endfor %}
 			•&nbsp;{{ post.minread }} <br>
 		    {{ post.summary }}

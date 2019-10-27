@@ -8,7 +8,7 @@
 
      <!-- FontAwesome CDN -->
     <script src="https://kit.fontawesome.com/f8ddbdbcbf.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="../static/jy.png">
+    <link rel="icon" type="image/png" href="../static/jy2.ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
@@ -27,7 +27,7 @@
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
 	      <div class="collapse navbar-collapse" id="navbarToggle">
-	        <div class="navbar-nav mr-auto">
+	        <div class="navbar-nav ml-2 mr-auto">
 	          <a class="nav-item nav-link" href="{{ url_for('about' )}}">About Me</a>
 	          <a class="nav-item nav-link" href="{{ url_for('blog' )}}">Blog</a>
 	          <!-- <a class="nav-item nav-link" href="{{ url_for('projects' )}}">Projects</a> -->
@@ -76,21 +76,9 @@
 	  		</a> &nbsp;&nbsp;
 	  		<a class="footer" href="https://www.instagram.com/jefe.yang/">
 	  			<i class="fab fa-instagram fa-lg"></i>
-	  		</a> &nbsp;&nbsp; | &nbsp;&nbsp;
-	  		<span class="footer">
-	  			<i class="fa fa-python"></i>
-	  		</span> &nbsp;&nbsp;
-	  		<span class="footer">
-	  			<i class="fab fa-markdown fa-lg"></i>
-	  		</span> &nbsp;&nbsp;
-	  		<span class="footer">
-	  			<i class="fab fa-html5 fa-lg"></i>
-	  		</span> &nbsp;&nbsp;
-	  		<span class="footer">
-	  			<i class="fab fa-css3-alt fa-lg"></i>
-	  		</span> &nbsp;&nbsp;
+	  		</a> 
 	  		<br><br>
-	  		<small> © Copyright 2019 JaeHo Yang. All Rights Reserved.</small>
+	  		<small> © Copyright 2019 JaeHo Yang. All Rights Reserved. Powered by <a href="https://palletsprojects.com/p/flask/">Flask</a>.</small>
 	 	</footer>
 	</div>
 

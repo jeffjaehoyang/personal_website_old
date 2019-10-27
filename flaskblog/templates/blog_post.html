@@ -1,7 +1,27 @@
 {% extends "layouts.html" %}
 {% block content %}
 	<h3><strong>{{ post.title }}</strong></h3>
-	Category: <strong>{{ post.category }}</strong><br>
+	<i class="fas fa-tags fa-sm"></i>
+	{% for category in post.category %}
+    	{% if loop.index < post.category|length %}
+    		<a href="{{ url_for('category', name=category)}}">
+		        <strong>{{ category }}</strong>
+	        </a>,
+    	{% else %}
+    	    <a href="{{ url_for('category', name=category)}}">
+		        <strong>{{ category }}</strong>
+	        </a>
+    	{% endif %}  
+	{% endfor %}
+    •&nbsp;{{ post.minread }}<br>
 	Published: {{ post.published }}<br><br>
-	{{ post.html|safe }}	
+	{{ post.html|safe }}
+	<br>
+	<br>
+	<div class="text-center">
+		<a href="{{ url_for('blog')}}" class="btn btn-outline-dark btn-sm" role="button">
+			Go Back to Blog
+		</a>	
+	</div>
+	<br>
 {% endblock %} 

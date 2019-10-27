@@ -19,12 +19,24 @@
 		      <small class="text-muted">{{ post.published }}</small>
 		    </div>
 		    <h3><a class="article-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a></h3>
-		    Category: <strong>{{ post.category }}</strong><br>
+		    <i class="fas fa-tags fa-sm"></i>
+		    {% for category in post.category %}
+		    	{% if loop.index < post.category|length %}
+		    		<a href="{{ url_for('category', name=category)}}">
+    			        <strong>{{ category }}</strong>
+    		        </a>,
+		    	{% else %}
+		    	    <a href="{{ url_for('category', name=category)}}">
+    			        <strong>{{ category }}</strong>
+    		        </a>
+		    	{% endif %}  
+			{% endfor %}
+		    •&nbsp;{{ post.minread }} <br>
 		    {{ post.summary }}
 		  </div>
 		</article>
 	{% endfor %}
-	
+	<br>
 	<hr>
 	<h3> Food for Thought </h3><br>
 	<p>“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” - Aristotle</p><br>

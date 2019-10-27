@@ -1,17 +1,18 @@
 author: Jeff Yang
 title: Spiral Matrix – Brain Teaser Series
-category: Algorithms
+category: [Algorithms]
 published: 2019-09-21
 summary: Some JavaScript code on how to solve the famous "spiral matrix" problem
+minread: 10 mins
 
 This is going to be the first of the “Brain Teaser” series, where I will be writing posts on the so-called “whiteboard interview questions” that I thought were interesting. This first post of the series is going to be about the “Spiral Matrix” problem, where you need to write a function that accepts an integer N and returns a N\*N spiral matrix.
 Problem Statement: Write a function that accepts an integer N and returns a N\*N spiral matrix.
 
 The problem statement itself may not paint a clear picture of what we are dealing with, so let us take a look at an example `spiralMatrix(4)`:  
 
-<div class="container">
+<div class="container text-center">
     <img
-        class="img-fluid text-center" 
+        class="img-fluid" 
         src="../../static/upload/spiral_matrix_1.jpg" 
     >
 </div>
@@ -23,9 +24,9 @@ This problem can be challenging to even start because it does not directly say w
 2. How will we populate the 2D array, spiraling inwards?
 
 Take a look at the following diagram:
-<div class="container">
+<div class="container text-center">
     <img
-        class="img-fluid text-center" 
+        class="img-fluid" 
         src="../../static/upload/spiral_matrix_2.jpg" 
     >
 </div>

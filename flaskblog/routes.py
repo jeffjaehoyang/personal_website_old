@@ -50,7 +50,6 @@ def projects():
 
 @current_app.route('/resume')
 def resume():
-    #path = 'resume/resume'
     path = '{}/{}'.format(Config.RESUME_DIR, 'resume')
     resume = flatpages.get_or_404(path)
     return render_template('resume.html', resume=resume)

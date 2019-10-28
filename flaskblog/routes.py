@@ -31,7 +31,7 @@ def contact():
             flash('All fields are required.')
             return render_template('contact.html', form=form)
         else:
-            msg = Message(form.subject.data, sender='jho.yang96@gmail.com', recipients=['jaeyang2021@u.northwestern.edu'])
+            msg = Message(form.subject.data, sender=Config.MAIL_USERNAME, recipients=[Config.MAIL_RECIPIENT])
             msg.body = """
             From: %s <%s>
             %s
@@ -50,7 +50,8 @@ def projects():
 
 @current_app.route('/resume')
 def resume():
-    path = 'resume/resume'
+    #path = 'resume/resume'
+    path = '{}/{}'.format(Config.RESUME_DIR, 'resume')
     resume = flatpages.get_or_404(path)
     return render_template('resume.html', resume=resume)
 

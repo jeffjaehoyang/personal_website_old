@@ -1,6 +1,6 @@
 {% extends "layouts.html" %}
 {% block content %}
-	<h3>Contact</h3><br>
+	<h3>Contact Me</h3><br>
 	<div class="content-section">
 		<form method="POST" action="" novalidate>
 			{{ form.hidden_tag() }}
@@ -58,6 +58,20 @@
 					    </div> 
 					{% else %}
 						{{ form.message(class="form-control form-control-lg") }}
+					{% endif %}
+				</div>
+				<div class="form-group">
+					{{ form.security_question.label(class="form-control-label") }}
+					<p style="font-size: 13px;">Q: If Jeff is 3 and Yang is 5, what is Jeff + Yang - 0?</p>
+					{% if form.security_question.errors %}
+						{{ form.security_question(class="form-control form-control-lg is-invalid") }}
+					    <div class="invalid-feedback">
+					    	{% for error in form.security_question.errors %}
+					    		<span>{{ error }}</span>
+					    	{% endfor %}
+					    </div> 
+					{% else %}
+						{{ form.security_question(class="form-control form-control-lg") }}
 					{% endif %}
 				</div>
 			</fieldset>

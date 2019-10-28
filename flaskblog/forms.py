@@ -55,7 +55,15 @@ class ContactForm(FlaskForm):
     message = TextAreaField('Message',
                             validators=[DataRequired()])
 
+    security_question = StringField('Bots Aren\'t Welcome',
+                                     validators=[DataRequired()])
+
     send = SubmitField('Send')
+
+    def validate_security_question(self, security_question):
+        answer = int(security_question.data)
+        if answer != 8:
+            raise ValidationError('Oops! Can you do simple arithmetics?')
 
 class UpdateAccountForm(FlaskForm):
     username = StringField('Username',

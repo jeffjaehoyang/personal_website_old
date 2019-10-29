@@ -1,17 +1,17 @@
 {% extends "layouts.html" %}
 {% block content %}
-	<h3><strong>{{ post.title }}</strong></h3>
-	<i class="fas fa-tags fa-sm"></i>
-	{% for category in post.category %}
-	    <a href="{{ url_for('category', name=category)}}" class="badge badge-pill badge-secondary">
-	        {{ category }}
-        </a>  
-	{% endfor %}
-    •&nbsp;{{ post.minread }}<br>
-	Published: {{ post.published }}<br><br>
-	{{ post.html|safe }}
-	<br>
-	<br>
+	<div class="article-title text-center">
+		<h2><strong>{{ post.title }}</strong></h2>
+		{% for category in post.category %}
+		    <a href="{{ url_for('category', name=category)}}" class="badge badge-pill badge-secondary">
+		        {{ category }}
+	        </a>  
+		{% endfor %}
+	    •&nbsp;{{ post.minread }}&nbsp;•&nbsp;{{ post.published }}<br><br>
+	</div>
+		{{ post.html|safe }}
+		<br>
+		<br>
 	<div class="text-center">
 		<a href="{{ url_for('blog')}}" class="btn btn-outline-dark btn-sm" role="button">
 			Go Back to Blog

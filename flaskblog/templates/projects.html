@@ -1,4 +1,37 @@
 {% extends "layouts.html" %}
 {% block content %}
-	<h3>Software projects that I've worked on.</h3>
+	<h3>Projects</h3><br>
+	<div class="row">
+	  <div class="col-sm-4">
+	    <div class="card bg-white">
+	      <img src="../static/upload/twitter.png" class="card-img-top" alt="...">
+	      <div class="card-body">
+	        <h5 class="card-title">
+	        	<a href="https://threewordthinker-api-heroku.herokuapp.com" style="color: #444444;">
+	        		<strong>Three Word Philosopher</strong>
+	        	</a>
+	        </h5>
+	        <p class="card-text">A simple tweet bot built through web-scraped repository of words, and an interface on a web application.
+	        </p>
+	        
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-sm-4">
+	    <div class="card bg-white">
+	      <img src="../static/upload/pythongmail.png" class="card-img-top" alt="...">
+	      <div class="card-body">
+	        <h5 class="card-title">
+	        	<a href="https://github.com/jeffjaehoyang/email_scraper" style="color: #444444;">
+	        		<strong>Email to Local Machine</strong>
+	        	</a>
+	        </h5>
+	        <p class="card-text">A python script to download email content to local machine, and save as file in a designated directory.
+	        </p>
+	        
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<br><br>
 {% endblock %} 

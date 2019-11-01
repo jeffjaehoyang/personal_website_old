@@ -59,7 +59,7 @@ $ vim Procfile
   web: gunicorn flaskrun: app
 ```
 <br>
-For those of you who are following along with your own application, please note that you should change `flaskrun` to the name of your application. We are ready to Deploy!  
+For those of you who are following along with your own application, please note that you should change `flaskrun` to the name of your application. We are ready to deploy!  
 <br>
 ##### 5. Deploy Your Application
 Inside your project directory, run:<br>

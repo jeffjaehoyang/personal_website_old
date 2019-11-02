@@ -26,7 +26,7 @@ Software Engineer, Intern
 Software Engineer, Intern
 <ul>
 	<li>Developed user experience enhancement features in JavaScript, jQuery, and Python such as sending automated emails and auto-generated PDF reports</li>
-	<li>Implemented a data visualization graph using SQL, Python, and JavaScript for user dashboard</li>
+	<li>Implemented a user dashboard data visualization graph using SQL and JavaScript’s ChartJS library</li>
 	<li>Wrote test suites using Python’s “unittest” framework to practice Test Driven Development (TDD) approach</li>
 	<li>Engaged in peer programming and code review sessions twice a week with senior engineers</li>
 	<li><strong>Leveraged Knowledge in</strong> Git, Django, JavaScript, Unit Testing, PostgreSQL, and debugged using Python Debugger</li>
@@ -35,12 +35,20 @@ Software Engineer, Intern
 <h4>Software Projects</h4> 
 <hr>
 <strong>Personal Website: www.jeffyangme.com</strong>
-
 <ul>
 	<li>Built a personal website from scratch using Python’s Flask micro-framework</li>
 	<li>Integrated a flat text-file objectifying Flask extension “Flask-Flatpages” for posting markdown files</li>
 	<li>Deployed on a Ubuntu Linux server using Nginx and Gunicorn</li>
 	<li><strong>Utilized:</strong> Python, Flask, Linux, Nginx, Gunicorn, SQLAlchemy, HTML/CSS</li>
+</ul>
+
+<strong>Tweet Bot: https://threewordthinker-api-heroku.herokuapp.com</strong>
+<ul>
+	<li>Built an automated tweet bot using Python’s Tweepy library to access Twitter API</li>
+	<li>Implemented a three-word-sentence generator by web scraping an e-book, cleaning up scraped data, categorizing words into three different lists to put as the first, middle, and last word of a randomly generated sentence</li>
+	<li>Integrated the tweet bot functionality with a user-friendly interface through a simple Flask web application</li>
+	<li>Automated tweet bot by adding a Python script as a daily Cron Job on local machine</li>
+	<li><strong>Utilized:</strong> Python, Twitter API, Flask, Web Scraping (BeautifulSoup), Regex, Cron, HTML/CSS</li>
 </ul>
 
 <strong>Python Script: Automated (Selective) Email Download to Local Machine</strong>  

@@ -93,3 +93,28 @@ a.footer {
 a.footer:hover {
   color: #428bca;
 }
+
+.card {
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+.blue-button{
+    width: 90px;
+    -webkit-transition: background-color 0.5s , color 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.5s , color 0.5s;
+    min-height: 10px;
+    background-color: #dadada;
+    color: #002E5B;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 12px;
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+.blue-button:hover{
+    background-color: #79839c;
+    color: #ffffff;
+}

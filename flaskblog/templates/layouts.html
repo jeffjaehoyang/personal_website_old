@@ -44,10 +44,10 @@
 
 	<main role="main" class="container">
 	  <div class="row">
-	  	{% if '/contact' in request.path %}
+	  	{% if '/contact' in request.path or '/blog' == request.path %}
 	  		<div class="col-md-8" style="float:none; margin:auto;">
 	  	{% else %}
-	    	<div class="col-md-10" style="float:none; margin:auto;">
+	    	<div class="col-md-8" style="float:none; margin:auto;">
 	    {% endif %}
 	      {% with messages = get_flashed_messages(with_categories=true) %}
 	      	{% if '/contact' not in request.path and messages %}
@@ -94,7 +94,7 @@
 		if (window.location.pathname == '/projects') {
 			$( ".card" ).hover(
 			  function() {
-			    $(this).addClass('shadow-lg').css('cursor', 'pointer'); 
+			    $(this).addClass('shadow-lg'); 
 			  }, function() {
 			    $(this).removeClass('shadow-lg');
 			  }

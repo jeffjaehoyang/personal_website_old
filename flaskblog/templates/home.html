@@ -11,39 +11,39 @@
 	  <hr class="my-4">
 	  <p class="lead">Some of my passions include but are not limited to: software development, managing a healthy lifestyle, and being a helpful existence to others. My end goal in life is to influence as many people as I can in a positive way. I hope this website helps achieve even the teeniest bit of that goal, and open up opportunities to learn from the world. Thanks for stopping by, and hopefully, enjoy!</p>
 	  <p class="lead text-right">
-    	<a class="btn btn-outline-dark btn-md" href="{{ url_for('about')}}" role="button">
-    		<i class="fas fa-chevron-right"></i>&nbsp;About Me
-    	</a>
+	  	<a href="{{ url_for('about')}}" class="btn btn-sm blue-button" role="button">Learn More</a>
   	  </p>
 	</div>
 	<hr>
 	<h3>Recent Posts</h3>
 	<br>
 	{% for post in posts %}
-		<article class="media content-section">
-		  <div class="media-body">
-		    <div class="article-metadata">
-		      <a class="mr-2">{{ post.author }}</a>
-		      <small class="text-muted">{{ post.published }}</small>
-		    </div>
-		    <h3><a class="article-title" href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a></h3>
-		    <i class="fas fa-tags fa-sm"></i>
+		<div class="card">
+	      <div class="card-body">
+	      	<h4 class="card-title">{{ post.title }}</h4>
+	      	<p class="card-text">{{ post.author }}&nbsp;&nbsp;
+	        	<small class="text-muted">{{ post.published }}</small><br>
+	        
+	        <i class="fas fa-tags fa-sm"></i> 
 		    {% for category in post.category %}
 	    	    <a href="{{ url_for('category', name=category)}}" class="badge badge-pill badge-secondary">
 			        {{ category }}
 		        </a>  
 			{% endfor %}
-		    •&nbsp;{{ post.minread }} <br>
+			•&nbsp;{{ post.minread }} <br>
 		    {{ post.summary }}
-		  </div>
-		</article>
+		    </p>
+	        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"\
+	        class="btn btn-sm blue-button">Read More</a>
+	      </div>
+	    </div>
 	{% endfor %}
 	<br>
 	<hr>
 	<h3> Food for Thought </h3><br>
 	<div class="row">
 	  <div class="col-sm-4">
-	    <div class="card border-secondary bg-transparent">
+	    <div class="card bg-transparent">
 	      <div class="card-header"><strong>Commitment to Excellence</strong></div>
 	      <div class="card-body">
 	        <h5 class="card-title"></h5>
@@ -55,7 +55,7 @@
 	    </div>
 	  </div>
 	  <div class="col-sm-4">
-	    <div class="card border-secondary bg-transparent">
+	    <div class="card bg-transparent">
 	      <div class="card-header"><strong>Compassion</strong></div>
 	      <div class="card-body">
 	        <h5 class="card-title"></h5>
@@ -67,7 +67,7 @@
 	    </div>
 	  </div>
 	  <div class="col-sm-4">
-	    <div class="card border-secondary bg-transparent">
+	    <div class="card bg-transparent">
 	      <div class="card-header"><strong>Perseverance</strong></div>
 	      <div class="card-body">
 	        <h5 class="card-title"></h5>

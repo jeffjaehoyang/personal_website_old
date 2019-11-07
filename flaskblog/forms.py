@@ -1,4 +1,4 @@
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm, RecaptchaField, Recaptcha
 from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
@@ -55,15 +55,9 @@ class ContactForm(FlaskForm):
     message = TextAreaField('Message',
                             validators=[DataRequired()])
 
-    security_question = IntegerField('Bots Aren\'t Welcome',
-                                     validators=[DataRequired()])
+    recaptcha = RecaptchaField(validators=[Recaptcha(message="Please ensure you are a human!")])
 
-    send = SubmitField('Send')
-
-    def validate_security_question(self, security_question):
-        answer = security_question.data
-        if answer != 8:
-            raise ValidationError('Oops! Can you do simple arithmetics?')
+    send = SubmitField('Connect')
 
 class UpdateAccountForm(FlaskForm):
     username = StringField('Username',

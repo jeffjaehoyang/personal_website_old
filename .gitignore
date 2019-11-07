@@ -4,3 +4,4 @@ venv/
 .venv
 *.pyc
 flaskblog/config.py
+.env

@@ -42,6 +42,7 @@ def contact():
             return redirect(url_for('home'))
  
     elif request.method == 'GET':
+        print(Config.RECAPTCHA_PRIVATE_KEY)
         return render_template('contact.html', form=form)
 
 @current_app.route('/projects')

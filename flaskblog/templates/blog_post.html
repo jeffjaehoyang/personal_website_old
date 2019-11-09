@@ -3,7 +3,7 @@
 	<div class="article-title text-center">
 		<h2><strong>{{ post.title }}</strong></h2>
 		{% for category in post.category %}
-		    <a href="{{ url_for('category', name=category)}}" class="badge badge-pill badge-secondary">
+		    <a href="{{ url_for('category', name=category)}}" class="badge badge-light">
 		        {{ category }}
 	        </a>  
 		{% endfor %}

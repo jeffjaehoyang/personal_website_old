@@ -1,6 +1,9 @@
 {% extends "layouts.html" %}
 {% block content %}
 	<h3><strong>Words & Code.</strong></h3><br>
+	{% if '/category' in request.path %}
+		<h4>[ {{ name }} ]</h4><br>
+	{% endif %}
 	{% for post in posts %}
 		<div class="card">
 	      <div class="card-body">

@@ -11,7 +11,7 @@ from flask import current_app
 def home():
     posts = [p for p in flatpages if 'published' in p.meta]
     posts.sort(key=lambda item:item['published'], reverse=True)
-    return render_template('home.html', posts=posts)
+    return render_template('home.html', posts=posts[:5])
 
 @current_app.route('/blog')
 def blog():
@@ -42,7 +42,6 @@ def contact():
             return redirect(url_for('home'))
  
     elif request.method == 'GET':
-        print(Config.RECAPTCHA_PRIVATE_KEY)
         return render_template('contact.html', form=form)
 
 @current_app.route('/projects')
@@ -119,5 +118,5 @@ def post(name):
 def category(name):
     posts = [p for p in flatpages if name in p.meta['category']]
     posts.sort(key=lambda item:item['published'], reverse=True)
-    return render_template('blog.html', posts=posts)
+    return render_template('blog.html', posts=posts, name=name)
 

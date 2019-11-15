@@ -5,6 +5,7 @@ category: [Internship]
 summary: My first SWE internship, I'd like to think I definitely learned a lot from this one.
 minread: 5 mins
 
+<br>
 Summer 2017 Knowru SWE Internship
 
 After hours of debugging, BOOM. Your code finally runs. We all know how that feels – it’s the very reason why we all enjoy coding. The more experienced developers know how to calm down, and get back to work; they understand that writing functional code isn’t the end of the process. On the other hand, the less experienced programmers tend to shake their hands off right away and type “git push origin master” on their command line. It’s a fully-functional and working code that they just pushed to their git repository, so what could possibly be wrong? Well, the last step – the refactoring process still awaits.

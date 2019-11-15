@@ -5,6 +5,7 @@ published: 2019-11-09
 summary: How do we check if a binary tree is balanced or not? Explained in Python.
 minread: 8 mins
 
+<br>
 This is the second post of the algorithms series, and this time I would like to share a classic algorithms problem related to binary trees. In this post, we are going to examine how to check if a binary tree is balanced.  
 <br>
 **Problem Statement:** Write a function that takes a root node of a tree as an input, and returns whether or not the tree is balanced. A balanced tree satisfies the following condition: the difference between depths of any two leaf nodes must be no greater than 1.  
@@ -74,7 +75,7 @@ def check_balanced(root):
             if currnode.right: 
                 nodes.append(currnode.right, currdepth + 1)
 
-    #if we haven't had an issue this far, it's safe return True!
+    #if we haven't had an issue this far, it's safe to return True!
     return True
 ```
 <br>

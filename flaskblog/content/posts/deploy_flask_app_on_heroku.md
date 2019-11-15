@@ -7,9 +7,8 @@ minread: 7 mins
 
 <div class="container">
     <img
-        class="img-fluid float-right" 
-        style="margin-left: 20px" 
-        src="../../static/upload/heroku.png" 
+        class="img-fluid" 
+        src="../../static/upload/heroku_flask.png" 
     >
 </div>
 

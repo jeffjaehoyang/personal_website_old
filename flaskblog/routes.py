@@ -112,7 +112,6 @@ def account():
 def post(name):
     path = '{}/{}'.format(Config.POST_DIR, name)
     post = flatpages.get_or_404(path)
-    print(post.meta)
     return render_template('blog_post.html', post=post, title=post.meta['title'])
 
 @current_app.route('/category/<name>')

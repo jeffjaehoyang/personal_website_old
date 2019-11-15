@@ -5,6 +5,7 @@ published: 2019-09-21
 summary: Some JavaScript code on how to solve the famous "spiral matrix" problem.
 minread: 10 mins
 
+<br>
 This is going to be the first of the algorithms series, where I will be writing posts on the so-called “whiteboard interview questions” that I thought were interesting. I'm giving this series a try because not only do I value sharing knowledge, but this is also a great way for me to learn and brush up my algorithms skills! So for this first post of the series, we are going to take a look at the “Spiral Matrix” problem, where you need to write a function that accepts an integer N and returns a N\*N spiral matrix.  
 <br>
 **Problem Statement:** Write a function that accepts an integer N and returns a N\*N spiral matrix.

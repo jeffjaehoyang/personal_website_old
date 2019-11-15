@@ -7,9 +7,8 @@ minread: 15 mins
 
 <div class="container">
     <img
-        class="img-fluid float-right" 
-        style="margin-left: 20px" 
-        src="../../static/upload/flask.png" 
+        class="img-fluid" 
+        src="../../static/upload/flask_md.png" 
     >
 </div>
 

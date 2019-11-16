@@ -1,6 +1,8 @@
 {% extends "layouts.html" %}
 {% block content %}
-	<h3><strong>Contact Me</strong></h3><br>
+	<h3 class="text-center"><strong>Contact Me</strong></h3><br>
+	<div id="map"></div>
+	<div class="col-md-8" style="float:none; margin:auto;">
 	<div class="content-section">
 		<form method="POST" action="" novalidate>
 			{{ form.hidden_tag() }}
@@ -76,6 +78,7 @@
 				{{ form.send(class="btn btn-sm blue-button") }}
 			</div>
 		</form>
+	</div>
 	</div>
 	<br><br>
 {% endblock %} 

@@ -1,21 +1,32 @@
 {% extends "layouts.html" %}
 {% block content %}
-	<div class="content-section">
-	  <p class="display-5">
+	<!-- <div class="card">
+	  <div class="card-body"> -->
+	<div style="margin-top: 15px; padding-bottom:15px">
 	    <img
 	        class="account-img img-fluid" 
-	        src="../static/upload/my_avataar.jpg" 
+	        src="../static/upload/my_avataar2.jpg" 
 	    ><strong>Personal blog by Jeff Yang.</strong>
-	  </p> 
-	  <p class="lead">Hi, my name is Jeff, a 23 year old college student venturing into the world of technology and computer science. I'm always looking for ways to learn and make a positive impact on this world.</p>
-	  <hr class="my-4">
-	  <p class="lead">Some of my passions include but are not limited to: software development, managing a healthy lifestyle, and being a helpful existence to others. My end goal in life is to influence as many people as I can in a positive way. I hope this website helps achieve even the teeniest bit of that goal, and open up opportunities to learn from the world. Thanks for stopping by, and hopefully, enjoy!</p>
-	  <p class="lead text-right">
-	  	<a href="{{ url_for('about')}}" class="btn btn-sm blue-button" role="button">Learn More</a>
-  	  </p>
-	</div>
+	    </p> 
+	    <p class="lead">Hi, I am Jeff, a college student.<br>
+	    I'm always looking for ways to learn,<br>
+	    and make a positive impact on this world.<br>
+	    Some of my <u>passions</u> include, but are not limited to:<br>
+	    <u>coding and technology,<br>
+	    managing a healthy lifestyle,<br>
+	    and being a helpful existence to others</u>.<br>
+	    My end goal in life is to <u>influence</u><br>
+	    as many people as I can in a <u>positive way</u>.<br>
+	    I hope this space helps achieve even the teeniest bit of that goal,<br>
+	    and open up opportunities to <u>learn from the world</u>.
+	    <br>
+	    Thanks for stopping by, and hopefully, enjoy!</p>
+	    <p class="lead text-right">
+	  	<a href="{{ url_for('about')}}" class="btn btn-sm blue-button" role="button">About me</a>
+  	    </p>
+  	</div>
 	<hr>
-	<h3>Recent Posts</h3>
+	<h3><strong>Recent posts</strong></h3>
 	<br>
 	{% for post in posts %}
 		<div class="card">
@@ -34,21 +45,21 @@
 		    {{ post.summary }}
 		    </p>
 	        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"\
-	        class="btn btn-sm blue-button">Read More</a>
+	        class="btn btn-sm blue-button">Read more</a>
 	      </div>
 	    </div>
 	{% endfor %}
 	<br>
 	<hr>
-	<h3> Food for Thought </h3><br>
+	<h3><strong>I keep in mind...</strong></h3><br>
 	<div class="row">
 	  <div class="col-sm-4">
 	    <div class="card bg-transparent">
-	      <div class="card-header"><strong>Commitment to Excellence</strong></div>
+	      <div class="card-header"><strong>Habitual Excellence</strong></div>
 	      <div class="card-body">
 	        <h5 class="card-title"></h5>
 	        <p class="card-text">“We are what we repeatedly do. Excellence, then, is not an act, but a habit.”
-	        	<br><br>- Aristotle
+	        	<br><br>- <i>Aristotle</i>
 	        </p>
 	        
 	      </div>
@@ -60,7 +71,7 @@
 	      <div class="card-body">
 	        <h5 class="card-title"></h5>
 	        <p class="card-text">“No one is useless in this world who lightens the burdens of another.”
-	        	<br><br>- Charles Dickens
+	        	<br><br>- <i>Charles Dickens</i>
 	        </p>
 	        
 	      </div>
@@ -71,8 +82,8 @@
 	      <div class="card-header"><strong>Perseverance</strong></div>
 	      <div class="card-body">
 	        <h5 class="card-title"></h5>
-	        <p class="card-text">“Success is not final, failure is not fatal: it is the courage to continue that counts." 
-	        	<br><br>- Winston Churchill
+	        <p class="card-text">“Success is not final, failure is not fatal: it is the courage to continue that counts.”
+	        	<br><br>- <i>Winston Churchill</i>
 	        </p>
 	        
 	      </div>

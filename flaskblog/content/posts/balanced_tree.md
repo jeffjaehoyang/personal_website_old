@@ -1,6 +1,6 @@
 author: Jeff Yang
 title: Balanced Binary Tree - Algorithms
-category: [Algorithms, Python]
+category: [Algorithms, Leetcode]
 published: 2019-11-09
 summary: How do we check if a binary tree is balanced or not? Explained in Python.
 minread: 8 mins
@@ -9,6 +9,8 @@ minread: 8 mins
 This is the second post of the algorithms series, and this time I would like to share a classic algorithms problem related to binary trees. In this post, we are going to examine how to check if a binary tree is balanced.  
 <br>
 **Problem Statement:** Write a function that takes a root node of a tree as an input, and returns whether or not the tree is balanced. A balanced tree satisfies the following condition: the difference between depths of any two leaf nodes must be no greater than 1.  
+<br>
+**Problem Source**: Leetcode - [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)  
 <br>
 The problem statement itself may not paint a clear picture of what we are dealing with, so let us take a look at the following picture of a balanced binary tree. Notice that the depth of all leaf nodes differ by at most 1. 
 
@@ -59,7 +61,8 @@ def check_balanced(root):
 
     while len(nodes) > 0:
         currnode, currdepth = nodes.pop()
-        if currnode.left is not None and currnode.right is not None:
+        #we found a leaf node!
+        if not currnode.left and not currnode.right:
             if currdepth not in depths: 
                 depths.append(currdepth)
                 #this is where we optimize our algorithm
@@ -69,6 +72,7 @@ def check_balanced(root):
                 if len(depths) > 2 or\
                    (len(depths) == 2 and abs(depths[0] - depths[1]) > 1):
                    return False
+        #if it's not a leaf node, keep traversing 
         else:
             if currnode.left: 
                 nodes.append(currnode.left, currdepth + 1)

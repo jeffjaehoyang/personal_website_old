@@ -34,8 +34,7 @@ function tableAutoReload() {
     });
 }
 ```
-
-
+<br>
 The `reloadTable()` function above is a simple javascript function written using the jquery library that changes the font color of selected elements. This function is then utilized by the `tableAutoReload()` function that calls `reloadTable()` every 5 minutes. This code does the job of changing the font color for some elements, but is the code maintainable? Is the code easily readable? If a future developer wants to use the same `reloadTable()` function to change the font size, is the job for him/her going to be easy and smooth?
 
 Now, let us take a look at a refactored version:
@@ -71,7 +70,7 @@ function tableAutoReload() {
     })
 }
 ```
-
+<br>
 This code may seem longer, but it is now much more organized. Instead of writing a callback function entirely inside the `reloadTable()` function, there is now a separate `autoReloadCallBack()` function which can call however many other functions. The functions inside `autoReloadCallBack()` function is defined outside. After refactoring, it’s easier to read code, and to maintain code. If there is an unexpected error some couple of weeks later, it will be much easier to debug since the functions are separated. If a new junior developer wants to call any other function as a callback, he/she can simply write a function and call that function inside `autoReloadCallBack()`. Now everything’s easier, right?
 
 Decide for yourself; would you like to work with a partner who writes sin(π/6)*[√4] + (3!)^2 – (46,656)^(1/3) instead of just “1”? Simplicity generally isn’t a negative concept, but in programming, it certainly is something that all programmers should strive for.

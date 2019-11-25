@@ -1,14 +1,12 @@
 {% extends "layouts.html" %}
 {% block content %}
-	<!-- <div class="card">
-	  <div class="card-body"> -->
-	<div style="margin-top: 15px; padding-bottom:15px">
+	<div class="intro">
 	    <img
 	        class="account-img img-fluid" 
 	        src="../static/upload/my_avataar2.jpg" 
-	    ><strong>Personal blog by Jeff Yang.</strong>
+	    ><span class="personal">Personal blog by Jeff Yang.</span>
 	    </p> 
-	    <p class="lead">Hi, I am Jeff, a college student.<br>
+	    <p>Hi, I am Jeff, a college student.<br>
 	    I'm always looking for ways to learn,<br>
 	    and make a positive impact on this world.<br>
 	    Some of my <u>passions</u> include, but are not limited to:<br>
@@ -31,17 +29,15 @@
 	{% for post in posts %}
 		<div class="card">
 	      <div class="card-body">
-	      	<h4 class="card-title">{{ post.title }}</h4>
-	      	<p class="card-text">{{ post.author }}&nbsp;&nbsp;
-	        	<small class="text-muted">{{ post.published }}</small><br>
-	        
+	      	<h5 class="card-title">{{ post.title }}</h5>
 	        <i class="fas fa-tags fa-sm"></i> 
 		    {% for category in post.category %}
 	    	    <a href="{{ url_for('category', name=category)}}" class="badge badge-light">
 			        {{ category }}
 		        </a>  
 			{% endfor %}
-			•&nbsp;{{ post.minread }} <br>
+			•&nbsp;<small class="text-muted">{{ post.minread }}</small>
+			•&nbsp;<small class="text-muted">{{ post.published }}</small><br>
 		    {{ post.summary }}
 		    </p>
 	        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"\

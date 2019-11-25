@@ -11,17 +11,17 @@ from flask import current_app
 def home():
     posts = [p for p in flatpages if 'published' in p.meta]
     posts.sort(key=lambda item:item['published'], reverse=True)
-    return render_template('home.html', posts=posts[:5], title='personal development, passion, and life')
+    return render_template('home.html', posts=posts[:5], title='Learn, everyday')
 
 @current_app.route('/blog')
 def blog():
     posts = [p for p in flatpages if 'published' in p.meta]
     posts.sort(key=lambda item:item['published'], reverse=True)
-    return render_template('blog.html', posts=posts, title='blog')
+    return render_template('blog.html', posts=posts, title='Blog')
 
 @current_app.route('/about')
 def about():
-    return render_template('about.html', title='about me')
+    return render_template('about.html', title='About me')
 
 @current_app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -29,7 +29,7 @@ def contact():
     if request.method == 'POST':
         if form.validate() == False:
             flash('All fields are required.')
-            return render_template('contact.html', form=form, title='contact')
+            return render_template('contact.html', form=form, title='Contact')
         else:
             msg = Message(form.subject.data, sender=Config.MAIL_USERNAME, recipients=[Config.MAIL_RECIPIENT])
             msg.body = """
@@ -42,17 +42,17 @@ def contact():
             return redirect(url_for('home'))
  
     elif request.method == 'GET':
-        return render_template('contact.html', form=form, title='contact')
+        return render_template('contact.html', form=form, title='Contact')
 
 @current_app.route('/projects')
 def projects():
-    return render_template('projects.html', title='projects')
+    return render_template('projects.html', title='Projects')
 
 @current_app.route('/resume')
 def resume():
     path = '{}/{}'.format(Config.RESUME_DIR, 'resume')
     resume = flatpages.get_or_404(path)
-    return render_template('resume.html', resume=resume, title='resume')
+    return render_template('resume.html', resume=resume, title='Resume')
 
 @current_app.route('/register', methods=['GET', 'POST'])
 def register():

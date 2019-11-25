@@ -1,19 +1,19 @@
 {% extends "layouts.html" %}
 {% block content %}
 	<div class="article-title text-center">
-		<h2><strong>{{ post.title }}</strong></h2>
+		<h2>{{ post.title }}</h2>
 		{% for category in post.category %}
 		    <a href="{{ url_for('category', name=category)}}" class="badge badge-light">
 		        {{ category }}
 	        </a>  
 		{% endfor %}
-	    •&nbsp;{{ post.minread }}&nbsp;•&nbsp;{{ post.published }}<br><br>
+		•&nbsp;<small class="text-muted">{{ post.minread }}</small>
+		•&nbsp;<small class="text-muted">{{ post.published }}</small>
 	</div>
+	<div class="post-content">
 		{{ post.html|safe }}
-		<br>
-		<br>
-	<div class="text-center">
+	</div>
+	<div class="go-back text-center">
 		<a href="{{ url_for('blog')}}" class="btn btn-sm blue-button" role="button">Go Back</a>	
 	</div>
-	<br>
 {% endblock %} 

@@ -18,7 +18,9 @@
 
      <!-- FontAwesome CDN -->
     <script src="https://kit.fontawesome.com/f8ddbdbcbf.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="../static/jy2.ico">
+    <link rel="icon" type="image/png" href="../static/jy.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,700,900|Source+Sans+Pro:200,300,400,700,900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
@@ -27,12 +29,11 @@
 </head>
 <body>
 	<header class="site-header">
-	  <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #fffffc">
+	  <nav class="navbar navbar-expand-md navbar-light fixed-top col-md-10">
 	    <div class="container">
-	      <a class="navbar-brand mr-2" href="/">
+	      <a class="navbar-brand mr-4" href="/">
 	      	<strong>Jeff Yang</strong>
 	      </a>
-	      <p style="color: #000000; margin-left: 95px; position: fixed;">|</p>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
@@ -48,7 +49,7 @@
 	        <!-- <div class="navbar-nav">
 	        </div> -->
 	      </div>
-	    </div>
+		</div>
 	  </nav>
 	</header>
 
@@ -80,13 +81,13 @@
 		<footer>
 	  		<a class="footer" href="https://www.linkedin.com/in/jaeho-yang/">
 	  			<i class="fab fa-linkedin fa-lg"></i>
-	  		</a> &nbsp;&nbsp;
+	  		</a>&nbsp;&nbsp;
 	  		<a class="footer" href="https://github.com/jeffjaehoyang">
 	  			<i class="fab fa-github fa-lg"></i>
-	  		</a> &nbsp;&nbsp;
+	  		</a>&nbsp;&nbsp;
 	  		<a class="footer" href="https://www.instagram.com/jefe.yang/">
 	  			<i class="fab fa-instagram fa-lg"></i>
-	  		</a> 
+	  		</a>
 	  		<br><br>
 	  		<small> Made with  <i class="fa fa-heart" aria-hidden="true"></i> by Jeff Yang. Powered by <a href="https://palletsprojects.com/p/flask/">Flask</a>.</small>
 	 	</footer>

@@ -17,7 +17,7 @@ Hello World! This is a post that was on my mind for a while now, and I'm so glad
 ##### 1. What is Flask?
 Flask is a lightweight microframework written in Python that is both intuitive and beginner friendly. I have a bit of prior experience in Flask development (mostly with APIs), but this was my first time building a Flask app completely from scratch, and I found the basics to be fairly easy to grasp. What I found was particularly convenient about Flask was Jinja2, a templating engine that comes with Flask (upon installation, literally). Jinja2 made it easy to create nested pages, by using a common layout page that all the nested pages could be built into. I decided to serve static Markdown files for my blog posts, instead of updating and editing directly from the website through a form. To achieve this, I used Flask's FlatPages module, which essentially serves static Markdown files from a designated directory (all you need to do is upload a Markdown file to the directory, and it will be up on your website!)  
 <br>
-##### 2. Let's Get Started! 
+##### 2. Let's Get Started!  
 ###### Setting Up Your Virtual Environment
 All developers who have any level of experience with Python will probably agree that no matter what type of project you are working on, installing packages systemwide is not a good idea. If you are new to Python, and don't have a clue about what a virtual environment is, here's an overly simplified explanation: Essentially, virtual environments help keep your dependencies (i.e. libraries/packages) separate for each project, so that each project knows exactly what versions of which extensions it needs to run properly. For more detailed information on Python's virtual environment and best practices, I found [this](https://realpython.com/python-virtual-environments-a-primer/) article particularly resourceful. 
 
@@ -183,7 +183,9 @@ def post(name):
     return render_template('blog_post.html', post=post)
 ```
 <br>
-For more detailed explanation on templating, please check the [documentation](https://jinja.palletsprojects.com/en/2.10.x/) for Jinja2. 
+For more detailed explanation on templating, please check the [documentation](https://jinja.palletsprojects.com/en/2.10.x/) for Jinja2.  
+<br>
+
 ##### 4. Want to Insert Code Snippets for Blog Posts? 
 I knew from the moment I started building this website that I would need a way to insert code snippets inside a code block, with syntax highlighting. Using Wordpress, it was easy. I just had to install a plugin. Trying to add this feature to my own website, however, was a slightly different story. It's extremely easy to find code snippets on the internet, they are on essentially every tech blog, we can see them on Stack Overflow, but it wasn't as easy as I thought it would be to find exactly what I needed for this site. To save you from some trouble in case you are looking to add code snippets to your Flask application, here's how to do it.  
 
@@ -249,6 +251,5 @@ That should do it. We finally have the backbones of a functional personal blog b
 - Created simple HTML templates powered by Jinja2
 - Went through how to serve static Markdown files through the HTML templates using Flask-Flatpages
 - How to insert prettified code blocks into our blog posts through some simple configurations of FlatPages-Markdown-Codehilite-Pygments <br>
-</ul>
-Congratulations! Now we are cookin' with Flask!
 
+Congratulations! Now we are cookin' with Flask!

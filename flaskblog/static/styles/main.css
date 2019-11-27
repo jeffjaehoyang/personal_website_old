@@ -11,9 +11,7 @@ h4, h5, h6 {
 
 h1, h2, h3 {
   color: #444444;
-  font-family: 'Source Sans Pro', sans-serif;
 }
-
 
 .site-header .navbar {
   background-color: #fffffc;
@@ -111,6 +109,15 @@ a.article-title:hover {
 a.footer {
   color: #444444;
   display: inline-block;
+  text-align: center;
+}
+
+a.footer-github {
+  margin-right: 20px;
+}
+
+a.footer-linkedin {
+  margin-right: 20px;
 }
 
 a.footer:hover {
@@ -161,7 +168,6 @@ a.footer:hover {
 .intro .personal {
   font-size: 16px;
   font-weight: 700;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #map {

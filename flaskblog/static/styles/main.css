@@ -47,7 +47,7 @@ h1, h2, h3 {
 .content-section {
   background: #fffffc;
   padding: 10px 20px;
-  border: 1.5px solid #dddddd;
+  border: 1px solid #dddddd;
   border-radius: 5px;
   margin-bottom: 20px;
 }

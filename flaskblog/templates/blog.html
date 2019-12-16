@@ -4,24 +4,53 @@
 	{% if '/category' in request.path %}
 		<h4>[ {{ name }} ]</h4><br>
 	{% endif %}
-	{% for post in posts %}
-		<div class="card">
-	      <div class="card-body">
-	      	<h5 class="card-title">{{ post.title }}</h5>
-	        <i class="fas fa-tags fa-sm"></i> 
-		    {% for category in post.category %}
-	    	    <a href="{{ url_for('category', name=category)}}" class="badge badge-light">
-			        {{ category }}
-		        </a>  
-			{% endfor %}
-			•&nbsp;<small class="text-muted">{{ post.minread }}</small>
-			•&nbsp;<small class="text-muted">{{ post.published }}</small><br>
-		    {{ post.summary }}
-		    </p>
-	        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"\
-	        class="btn btn-sm blue-button">Read more</a>
-	      </div>
-	    </div>
-	{% endfor %}
+
+	<div class="blog-section">
+		<h5><strong>Leetcode Solutions</strong></h5>
+		{% for post in posts %}
+			{% if 'Leetcode' in post.category %}
+				<div class="blog-section-posts">
+					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+	<div class="blog-section">
+		<h5><strong>Data Structures & Algorithms</strong></h5>
+		{% for post in posts %}
+			{% if 'Algorithms' in post.category %}
+				<div class="blog-section-posts">
+					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+	<div class="blog-section">
+		<h5><strong>Tutorials</strong></h5>
+		{% for post in posts %}
+			{% if 'Tutorial' in post.category %}
+				<div class="blog-section-posts">
+					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+
+	<div class="blog-section">
+		<h5><strong>Personal Reflections</strong></h5>
+		{% for post in posts %}
+			{% if 'Internship' in post.category %}
+				<div class="blog-section-posts">
+					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
 	<br><br>
 {% endblock %} 

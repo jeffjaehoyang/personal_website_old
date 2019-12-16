@@ -7,7 +7,7 @@
 .codehilite .cm { color: #008800; font-style: italic } /* Comment.Multiline */
 .codehilite .cp { color: #008800; font-style: italic } /* Comment.Preproc */
 .codehilite .cpf { color: #008800; font-style: italic } /* Comment.PreprocFile */
-.codehilite .c1 { color: #008800; font-style: italic } /* Comment.Single */
+.codehilite .c1 { color: #80827f; font-style: italic } /* Comment.Single */
 .codehilite .cs { color: #008800; font-style: italic } /* Comment.Special */
 .codehilite .kc { color: #353580; font-weight: bold } /* Keyword.Constant */
 .codehilite .kd { color: #353580; font-weight: bold } /* Keyword.Declaration */
@@ -17,7 +17,7 @@
 .codehilite .kt { color: #353580; font-weight: bold } /* Keyword.Type */
 .codehilite .m { color: #2c2cff } /* Literal.Number */
 .codehilite .s { color: #7a2424 } /* Literal.String */
-.codehilite .nf { color: #2c2cff } /* Name.Function */
+.codehilite .nf { color: #6015eb } /* Name.Function */
 .codehilite .nx { color: #be646c } /* Name.Other */
 .codehilite .nv { color: #35baba; font-weight: bold } /* Name.Variable */
 .codehilite .w { color: #bbbbbb } /* Text.Whitespace */

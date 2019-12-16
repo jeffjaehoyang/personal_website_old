@@ -1,6 +1,6 @@
 author: Jeff Yang
 title: Go Live With Your Flask Application on Heroku
-category: [Flask, Python, Deployment]
+category: [Flask, Python, Deployment, Tutorial]
 summary: A walk through of how to deploy your Flask application on Heroku.
 published: 2019-11-01
 minread: 7 mins

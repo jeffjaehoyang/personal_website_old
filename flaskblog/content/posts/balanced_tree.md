@@ -1,6 +1,6 @@
 author: Jeff Yang
-title: Balanced Binary Tree - Algorithms
-category: [Algorithms, Leetcode]
+title: Balanced Binary Tree - Leetcode
+category: [Leetcode]
 published: 2019-11-09
 summary: How do we check if a binary tree is balanced or not? Explained in Python.
 minread: 8 mins
@@ -24,7 +24,7 @@ The problem statement itself may not paint a clear picture of what we are dealin
 Hopefully, the picture above was enough to give you a clear idea of what a balanced binary tree looks like. Now, let's dive into solving the problem! We’ll go through it step by step.<br><br>
 1. We are interested in the *depth* of leaf nodes - nodes that don't have any child node
 
-At the end, we need to some how keep track of the depth of the leaf nodes to determine if the tree is balanced. There can be different ways to approaching this problem at hand. I'm going to be implementing an iterative depth-first traversal of the tree to check the depth of leaf nodes.  
+At the end, we need to somehow keep track of the depth of the leaf nodes to determine if the tree is balanced. There can be different ways to approaching this problem at hand. I'm going to be implementing an iterative depth-first traversal of the tree to check the depth of leaf nodes.  
 <br>
 To visualize depth-first traversal, take a look at the following diagram:
 <div class="container text-center">

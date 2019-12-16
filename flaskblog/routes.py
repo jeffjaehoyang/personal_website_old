@@ -118,5 +118,5 @@ def post(name):
 def category(name):
     posts = [p for p in flatpages if name in p.meta['category']]
     posts.sort(key=lambda item:item['published'], reverse=True)
-    return render_template('blog.html', posts=posts, title=name, name=name)
+    return render_template('category.html', posts=posts, title=name, name=name)
 

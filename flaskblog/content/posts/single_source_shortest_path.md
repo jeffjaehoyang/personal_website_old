@@ -102,17 +102,20 @@ def dijkstra(graph, source):
     	#select the node with minimum known distance
         curr_distance, curr_vertex = heapq.heappop(todo)
         
-        if visited[curr_vertex] is not True:
-            visited[curr_vertex] = True
-            
-            #check the neighbors of the current node
-            for neighbor, weight in graph[curr_vertex].items():
-            	#update if following condition is satisfied
-                if curr_distance + weight < dist[neighbor]:
-                    dist[neighbor] = curr_distance + weight
-                    #keep track of previous node : we need it to find shortest path
-                    pred[neighbor] = curr_vertex
-                    heapq.heappush(todo, (curr_distance + weight, neighbor))
+        #if vertex has already been visited, skip it
+        if visited[curr_vertex]: continue
+
+        #if vertex has not been visited do the follwing
+        visited[curr_vertex] = True
+        
+        #check the neighbors of the current node
+        for neighbor, weight in graph[curr_vertex].items():
+        	#update if following condition is satisfied
+            if curr_distance + weight < dist[neighbor]:
+                dist[neighbor] = curr_distance + weight
+                #keep track of previous node : we need it to find shortest path
+                pred[neighbor] = curr_vertex
+                heapq.heappush(todo, (curr_distance + weight, neighbor))
     #result packages dist and pred in a tuple       
     return (pred, dist)
 ```
@@ -182,7 +185,7 @@ The following is the result of running `dijkstra` and `shortest_path` functions 
 <br>
 
 ##### 5. Limitations of Dijkstra's Algorithm 
-The Dijkstra's algorithm is not bullet proof, however. The most remarkable limitation of Dijkstra's algorithm is that it will not work as expected if there are negative edges in a graph. In order to find the shortest distance from one starting vertex to all connected vertices, Dijkstra relies on the fact that if all edges are non-negative, it is always true that adding an edge will never make a path shorter. Only when such an assumption can safely be made can Dijkstra's "greedy" approach to the problem remain intact with solving global optimality. If negative edges are introduced and such an assumption is no longer valid, Dijkstra's method of selecting a node with minimum known distance at each iteration will no longer guarantee a correct outcome. To overcome such limitations of Dijkstra's algorithm, we can use other algorithms such as Bellman Ford's algorithm and Floyd-Warshall's algorithm, as needed. These may be subject to discussion in future posts.  
+The Dijkstra's algorithm is not bullet proof, however. The most remarkable limitation of Dijkstra's algorithm is that it will not work as expected if there are negative edges in a graph. In order to find the shortest distance from one starting vertex to all connected vertices, Dijkstra relies on the fact that if all edges are non-negative, it is always true that adding an edge will never make a path shorter. Only when such an assumption can safely be made can Dijkstra's "greedy" approach to the problem remain intact with solving global optimality. If negative edges are introduced and such an assumption is no longer valid, Dijkstra's method of selecting a node with minimum known distance at each iteration will no longer guarantee a correct outcome. To overcome such limitations of Dijkstra's algorithm, we can use other algorithms such as the Bellman-Ford's algorithm and the Floyd-Warshall's algorithm, as needed. These may be subject to discussion in future posts.  
 <br>
 
 ##### 6. Conclusion

@@ -1,64 +1,17 @@
 author: Jeff Yang
 title: Finding the Shortest Path From A to Anywhere
-category: [Algorithms]
+category: [Data Structures & Algorithms]
 summary: Traversing the graph with purpose, with some help from Dijkstra.
 published: 2019-12-15
-minread: 15 mins
+minread: 7 mins
 
 <br>
 In this post, I would like to take a slightly different approach and write about an algorithm that I learned about in a classroom setting. While taking a computer science course in data structures and algorithms this quarter, I found the graph data structure and related algorithms to be particularly fascinating, as graphs can be applied in real-life to represent virtually anything from friendships to geographic maps. Although far from being an expert on this topic, I am going to make an attempt to dissect perhaps the most famous graph algorithm and its practical application. Take a bow, introducing Dijkstra's algorithm and the single source shortest path problem.  
 <br>
 
-##### 1. Introduction to Graphs
-Before we dive into the main content of this post, it is necessary to have a basic understanding of graphs. A graph typically consists of a finite set of vertices (or nodes) and set of edges which connect a pair of vertices. To help your understanding, take a look at the following:  
 
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/graph_ds.png" 
-    >
-</div>
-
-As clearly depicted (on purpose) above, there are many different ways to categorize a graph. Here are some of the most important categorizations of a graph to be aware of:  
-
-* A **connected** graph has at least one vertex and there must be a path between every pair of vertices (i.e. every vertex must be reachable by following only the edges). Otherwise, we call it a **disconnected** graph. (We won't go into the details of *strongly* connected and *weakly* connected graphs)
-
-* A **directed** graph's edges have directions (often represented by arrows) associated to them. Otherwise, we call it an **undirected** graph.  
-
-* A **weighted** graph's edges have associated weights or values. Otherwise, we call it an **unweighted** graph.    
-* A **cyclic** graph contains at least one graph cycle. Otherwise, we call it an **acylic** graph. 
-
-In discussing Dijkstra's algorithm, we will specifically be considering **weighted** graphs. Weights are often used to denote a **cost** or **distance** associated with two vertices. Depending on what we are trying to represent with the graph, the weights can carry different meanings. For instance, if a graph represents a map, a weight between two vertices may denote the distance between two locations (which are represented as two distinct vertices) on the map.  
-
-**Note**: It is impossible to cover the entirety of graph theory in this blog post (nor do I have the knowledge to do so). The explanation above is the bare minimum knowledge that is required to continue with the discussion on Dijkstra's algorithm. If interested for more information on graphs (or graph theory), I found [this](https://medium.com/basecs/a-gentle-introduction-to-graph-theory-77969829ead8) article quite helpful.  
-<br>
-##### 2. Representation of Graphs
-To dive deeper into the discussion of graphs and to explore Dijkstra's algorithm, we need to understand how graphs are represented in a typical graph data structure. There are largely two different ways to represent any graph: as an *adjacency list* or as an *adjacency matrix*. 
-
-Let us first take a look at the **adjacency list representation** of a graph. A common way of representing a graph as an adjacency list is to directly map vertices to indices of an array, and at each index of an array, represent the neighboring vertices and weights in the form of linked lists. Take a look at the following example to help your understanding: 
-
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/adj_list.png" 
-    >
-</div>
-
-The diagram above shows how an undirected, weighted graph can be represented as an adjacency list. Note that using a linked list is not the only possible way to implement an adjacency list (we could use hash tables instead, and use vertices as keys and associated weights as values). 
-
-Now let us examine the **adjacency matrix representation** of a graph. An adjacency matrix representation differs from an adjacency list in that an adjacency matrix requires a |V| × |V| matrix (where |V| denotes the number of vertices) to store information on the existence of an edge between two vertices (if the graph is unweighted) or the weight between two vertices (if the graph is weighted). A non-existant edge is usually represented by a 0 for an unweighted graph, and by "inf" (infinity) for a weighted graph. To visualize the explanation, take a look at the following adjacent matrix representation of an undirected, weighted graph: 
-
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/adj_mat.png" 
-    >
-</div>
-
-The diagram above should give a clear idea of how to represent a graph with an adjacency matrix. If we were to represent an unweighted graph, the "inf"s would be replaced with 0s, and all the weights (represented in red numbers) would be replaced with 1s. Now, one might ask "Which representation is better?" Well, it *depends*. If optimizing for speed, an adjacency matrix representation will guarantee an O(1) lookup time when searching for an edge between two vertices. On the other hand, an adjacency list implemented with a linked list would give O(n) time, since in the worst case, we would have to search through the entire adjacency list of vertex *a* to find that there exists an edge between, say, *a* and *f*. If we were to optimize for space, however, an adjacency list would yield a significant advantage especially when representing a *sparse* graph. An adjacency list will only store information in a linked list if there *exists* an edge between two vertices. However, as explained above, an adjacency matrix always requires a |V| × |V| matrix. Hence, if a graph is sparse (i.e. there are very few edges between vertices), the adjacency matrix will be full of default values that indicate that there is no edge between two vertices, which is quite space-inefficient.   
-<br>
-##### 3. Single Source Shortest Path 
-Now it's finally time to inch closer to Dijkstra's algorithm. Before we talk about the algorithm itself, let's first get a sense of what Dijkstra's algorithm is all about; what significant questions can Dijkstra's famous algorithm answer? Often referred to as the "Single source shortest path" problem, Dijkstra's algorithm is suitable for finding the shortest distance from a single vertex to all other vertices. Using the results Dijkstra's algorithm produces, we can also find the shortest path from a single vertex to a specific destination, say, vertex *f*.   
+##### 1. Single Source Shortest Path 
+Before we talk about the algorithm itself, let's first get a sense of what Dijkstra's algorithm is all about; what significant questions can Dijkstra's famous algorithm answer? Often referred to as the "Single source shortest path" problem, Dijkstra's algorithm is suitable for finding the shortest distance from a single vertex to all other vertices. Using the results Dijkstra's algorithm produces, we can also find the shortest path from a single vertex to a specific destination, say, vertex *f*.   
 
 <div class="container text-center">
     <img
@@ -69,8 +22,8 @@ Now it's finally time to inch closer to Dijkstra's algorithm. Before we talk abo
 
 The graph illustrated above might have you think "It doesn't seem that hard to manually find the shortest path from vertex *a* to *f* !" If that's the case, imagine a graph with hundreds of vertices and edges; would you still be willing to manually find the shortest path from *a* to *f* ? It would be possible, but extremely time-consuming. This is where Dijkstra's algorithm comes into play. With some help from Dijkstra, we can find the shortest path from a single vertex to every other *reachable* vertex in the graph, with relative ease.  
 <br>
-##### 4. Dijkstra's Algorithm 
-Finally, we can start our dissection of what Dijkstra's algorithm is all about. If we simply try to memorize the code for the algorithm line by line, it will be difficult (at least for people with non-photographic memory, like me). The better approach would be to try and understand what repeated steps the algorithm goes through until it finishes processing the graph and returns. The following are the steps that Dijkstra's algorithm follows, until it exhausts the entire vertex set of a graph: 
+##### 2. Dijkstra's Algorithm 
+Finally, we can start our dissection of Dijkstra's algorithm. If we simply try to memorize the code for the algorithm line by line, it will be difficult (at least for people with non-photographic memory, like me). The better approach would be to try and understand what repeated steps the algorithm goes through until it finishes processing the graph and returns. The following are the steps that Dijkstra's algorithm follows, until it exhausts the entire vertex set of a graph: 
 
 1. When selecting the next node to visit, decision should be made based on the **known distance**  
 
@@ -184,10 +137,10 @@ The following is the result of running `dijkstra` and `shortest_path` functions 
 </div>
 <br>
 
-##### 5. Limitations of Dijkstra's Algorithm 
+##### 3. Limitations of Dijkstra's Algorithm 
 The Dijkstra's algorithm is not bullet proof, however. The most remarkable limitation of Dijkstra's algorithm is that it will not work as expected if there are negative edges in a graph. In order to find the shortest distance from one starting vertex to all connected vertices, Dijkstra relies on the fact that if all edges are non-negative, it is always true that adding an edge will never make a path shorter. Only when such an assumption can safely be made can Dijkstra's "greedy" approach to the problem remain intact with solving global optimality. If negative edges are introduced and such an assumption is no longer valid, Dijkstra's method of selecting a node with minimum known distance at each iteration will no longer guarantee a correct outcome. To overcome such limitations of Dijkstra's algorithm, we can use other algorithms such as the Bellman-Ford's algorithm and the Floyd-Warshall's algorithm, as needed. These may be subject to discussion in future posts.  
 <br>
 
-##### 6. Conclusion
+##### 4. Conclusion
 Hopefully this blog post helped you gain a solid understanding of Dijkstra's algorithm and the single source shortest path problem. If there is anyone reading this post who is interested in learning the mathematical proof on the correctness of Dijkstra's famous algorithm, I found [this](https://web.engr.oregonstate.edu/~glencora/wiki/uploads/dijkstra-proof.pdf) helpful. 
 

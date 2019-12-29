@@ -1,16 +1,16 @@
 body {
   background: #fffffc;
-  color: #333333;
+  color: #000000;
   margin-top: 5rem;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 h4, h5, h6 {
-  color: #444444;
+  color: #000000;
 }
 
 h1, h2, h3 {
-  color: #444444;
+  color: #000000;
 }
 
 .site-header .navbar {
@@ -23,10 +23,6 @@ h1, h2, h3 {
 .site-header .navbar-brand {
   font-size: 22px;
   color: #000000;
-}
-
-.site-header .navbar-brand:hover {
-  color: #7299a1;
 }
 
 .site-header .navbar-nav .nav-item {
@@ -52,7 +48,7 @@ h1, h2, h3 {
 }
 
 .article-title {
-  color: #444444;
+  color: #000000;
   margin-top: 30px; 
   margin-bottom: 30px;
 }
@@ -82,17 +78,6 @@ a.article-title:hover {
   border-bottom: 1px solid #e3e3e3
 }
 
-.article-metadata a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-.article-svg {
-  width: 25px;
-  height: 25px;
-  vertical-align: middle;
-}
-
 .account-img {
   height: 65px;
   width: 65px;
@@ -106,7 +91,7 @@ a.article-title:hover {
 }
 
 a.footer {
-  color: #444444;
+  color: #000000;
   display: inline-block;
   text-align: center;
 }
@@ -189,7 +174,7 @@ a.footer:hover {
 }
 
 .blog-section-posts a{
-  color: #333333;
+  color: #000000;
 }
 
 .blog-section-posts a:hover{
@@ -198,4 +183,12 @@ a.footer:hover {
 
 .blog-section .published {
   display: inline-block;
+}
+
+.project-card {
+  height: 65vh;
+}
+
+.project-card a{
+  color: #000000;
 }

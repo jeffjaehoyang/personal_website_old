@@ -20,7 +20,7 @@
 	<div class="blog-section">
 		<h5><strong>Data Structures & Algorithms</strong></h5>
 		{% for post in posts %}
-			{% if 'Algorithms' in post.category %}
+			{% if 'Data Structures & Algorithms' in post.category %}
 				<div class="blog-section-posts">
 					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
 					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}

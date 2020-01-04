@@ -61,4 +61,4 @@ Software Engineer, Intern
 <h4>Skills</h4>
 <hr>
 <strong>Proficient in</strong> Python, JavaScript (React, Redux, Node.js), Git  
-Familiar with SQL, C++, Java, HTML/CSS   
+<strong>Familiar with</strong> SQL, C++, Java, HTML/CSS   

@@ -5,7 +5,7 @@ body {
 }
 
 .onthetop {
-  height: 0.3em;
+  height: 0.2em;
   background-color: #7299a1;
   margin: 0;
   padding: 0.1em 0.1em 0.2em;
@@ -23,13 +23,8 @@ body {
 }
 
 .site-header .navbar-brand {
-  font-size: 22px;
+  font-size: 20px;
   color: #000000;
-  transition: transform .5s; /* Animation */
-}
-
-.site-header .navbar-brand:hover {
-  transform: scale(1.5);
 }
 
 .site-header .navbar-nav .nav-item {

@@ -1,8 +1,8 @@
 {% extends "layouts.html" %}
 {% block content %}
 	<h3><strong>Projects</strong></h3><br>
-	<div class="row">
-	  <div class="col-lg-4">
+	<div class="row project-display">
+	  <div class="col-lg-6">
 	    <div class="card bg-white project-card shadow">
 	      <img src="../static/upload/twitter.png" class="card-img-top">
 	      <div class="card-body">
@@ -16,7 +16,7 @@
 	      </div>
 	    </div>
 	  </div>
-	  <div class="col-lg-4">
+	  <div class="col-lg-6">
 	    <div class="card bg-white project-card shadow">
 	      <img src="../static/upload/pythongmail.png" class="card-img-top">
 	      <div class="card-body">
@@ -25,12 +25,13 @@
 	        		<strong>Email to Local Machine</strong>
 	        	</a>
 	        </h5>
-	        <p class="card-text">A python script to download email content to local machine, and save as file in a designated directory.
+	        <p class="card-text">
+	        	A python script to download email content to local machine, and save as file in a designated directory.
 	        </p>
 	      </div>
 	    </div>
 	  </div>
-	  <div class="col-lg-4">
+	  <div class="col-lg-6">
 	    <div class="card bg-white project-card shadow">
 	      <img src="../static/upload/twilio-owm.png" class="card-img-top">
 	      <div class="card-body">
@@ -39,7 +40,23 @@
 	        		<strong>Bring Your Umbrella</strong>
 	        	</a>
 	        </h5>
-	        <p class="card-text">SMS bot that notifies designated recepients if there is a need for an umbrella. Temperature notification is a bonus!
+	        <p class="card-text">
+	        	SMS bot that notifies designated recepients if there is a need for an umbrella. Temperature notification is a bonus!
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col-lg-6">
+	    <div class="card bg-white project-card shadow">
+	      <img src="../static/upload/pig_dice.png" class="card-img-top">
+	      <div class="card-body">
+	        <h5 class="card-title">
+	        	<a href="https://my-pig-dice-game.herokuapp.com/">
+	        		<strong>Pig Dice Game</strong>
+	        	</a>
+	        </h5>
+	        <p class="card-text">
+	        	Simple pig dice game for two users (non-mobile responsive). Implemented with HTML, CSS, Vanilla JavaScript only. UI credits to @JonasSchmedtmann. 
 	        </p>
 	      </div>
 	    </div>

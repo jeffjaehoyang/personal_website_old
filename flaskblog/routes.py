@@ -11,7 +11,7 @@ from flask import current_app
 def home():
     posts = [p for p in flatpages if 'published' in p.meta]
     posts.sort(key=lambda item:item['published'], reverse=True)
-    return render_template('home.html', posts=posts[:5], title='Learn, everyday')
+    return render_template('home.html', posts=posts[:5], title='Home')
 
 @current_app.route('/blog')
 def blog():

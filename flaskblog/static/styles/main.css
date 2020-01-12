@@ -20,6 +20,7 @@ body {
   padding-top: 0.25rem; 
   padding-bottom: 4rem;
   padding-left: 0;
+  padding-right: 0;
 }
 
 .site-header .navbar-brand {
@@ -39,6 +40,12 @@ body {
 
 .site-header .navbar-nav .nav-link.active {
   color: #000000;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 0 0 0 0;
 }
 
 .content-section {

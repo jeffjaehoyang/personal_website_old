@@ -1,6 +1,6 @@
 body {
   background: #fffffc;
-  color: #000000;
+  color: #3D3D3D;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -9,7 +9,6 @@ body {
   background-color: #7299a1;
   margin: 0;
   padding: 0.1em 0.1em 0.2em;
-  border-bottom: 1px solid #455B5E;
 }
 
 .site-header .navbar {
@@ -25,7 +24,7 @@ body {
 
 .site-header .navbar-brand {
   font-size: 20px;
-  color: #000000;
+  color: #3D3D3D;
 }
 
 .site-header .navbar-nav .nav-item {
@@ -39,7 +38,7 @@ body {
 }
 
 .site-header .navbar-nav .nav-link.active {
-  color: #000000;
+  color: #3D3D3D;
 }
 
 .navbar-toggler {
@@ -57,7 +56,7 @@ body {
 }
 
 .article-title {
-  color: #000000;
+  color: #3D3D3D;
   margin-top: 30px; 
   margin-bottom: 30px;
 }
@@ -100,7 +99,7 @@ a.article-title:hover {
 }
 
 a.footer {
-  color: #000000;
+  color: #3D3D3D;
   display: inline-block;
   text-align: center;
 }
@@ -153,7 +152,7 @@ a.footer:hover {
 .intro {
   font-size: 17px;
   font-weight: 300;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-top: 15px; 
   padding-bottom:15px;
 }
@@ -176,13 +175,13 @@ a.footer:hover {
 }
 
 .blog-section-posts a{
-  color: #000000;
+  color: #3D3D3D;
   position: relative;
   text-decoration: none;
 }
 
 .blog-section-posts a:hover{
-  color: #000000;
+  color: #3D3D3D;
 }
 
 .blog-section-posts a:before {
@@ -192,7 +191,7 @@ a.footer:hover {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #3D3D3D;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -208,10 +207,12 @@ a.footer:hover {
 
 .blog-section .published {
   display: inline-block;
+  font-family: "Inconsolata", sans-serif;
+  font-size: 14px;
 }
 
 .project-card {
-  height: 62vh;
+  min-height: 370px;
   border: transparent;
   border-radius: 20px;
 }
@@ -221,9 +222,45 @@ a.footer:hover {
 }
 
 .project-card a{
-  color: #000000;
+  color: #3D3D3D;
 }
 
 .contact-page {
   padding: 0em 0em 10em 0em;
 }
+
+.home-recent-posts {
+  margin-bottom: 75px;
+}
+
+.arrow-link {
+  color:#3D3D3D; 
+  font-size: 14px;
+  position: relative;
+  padding-bottom: 2px;
+
+}
+
+.arrow-link:hover {
+  color:#3D3D3D; 
+  text-decoration: none;
+}
+
+.arrow-link:hover:after {
+  width:100%;
+  left: 0;
+}
+
+.arrow-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  background: #3D3D3D;
+  transition: width 0.2s ease 0s, left 0.2s ease 0s;
+  width: 0;
+}
+

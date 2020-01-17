@@ -21,17 +21,17 @@
 	    <br>
 	    Thanks for stopping by, and hopefully, enjoy!</p>
 	    <p class="lead text-right">
-	  	<a href="{{ url_for('about')}}" class="btn btn-sm blue-button" role="button">About me</a>
+	  	<a href="{{ url_for('about')}}" class="arrow-link">&#8702; About me</a>	 
   	    </p>
   	</div>
 	<hr>
 	<h3><strong>Recent posts</strong></h3>
 	<br>
 	{% for post in posts %}
-		<div class="card">
-	      <div class="card-body">
-	      	<h5 class="card-title">{{ post.title }}</h5>
-	        <i class="fas fa-tags fa-sm"></i> 
+		<div class="home-recent-posts">
+	      <div>
+	      	<h4><strong>{{ post.title }}</strong></h4>
+	        <!-- <i class="fas fa-tags fa-sm"></i>  -->
 		    {% for category in post.category %}
 	    	    <a href="{{ url_for('category', name=category)}}" class="badge badge-light">
 			        {{ category }}
@@ -42,11 +42,12 @@
 		    {{ post.summary }}
 		    </p>
 	        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"\
-	        class="btn btn-sm blue-button">Read more</a>
+	        class="arrow-link">
+	        	&#8702; read
+	        </a>
 	      </div>
 	    </div>
 	{% endfor %}
-	<br>
 	<hr>
 	<h3><strong>I keep in mind...</strong></h3><br>
 	<div class="row">

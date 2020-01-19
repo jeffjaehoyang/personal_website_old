@@ -1,7 +1,7 @@
 body {
   background: #fffffc;
   color: #3D3D3D;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Tajawal', sans-serif;
 }
 
 .onthetop {
@@ -98,6 +98,12 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
+.layout-footer {
+  text-align: center; 
+  padding-top: 170px; 
+  padding-bottom: 50px;"
+}
+
 a.footer {
   color: #3D3D3D;
   display: inline-block;
@@ -121,28 +127,17 @@ a.footer:hover {
   background: transparent;
 }
 
-.blue-button{
-    width: 90px;
-    -webkit-transition: background-color 0.5s , color 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: background-color 0.5s , color 0.5s;
-    min-height: 10px;
-    background-color: #dadada;
-    color: #002E5B;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: 300;
-    font-size: 12px;
-    padding: 5px 0px;
-    display: inline-block;
-}
-
-.blue-button:hover{
-    background-color: #79839c;
-    color: #ffffff;
-}
-
 .go-back {
-  margin-bottom: 50px;
+  font-size: 14px;
+  padding-top: 30px;
+}
+
+.go-back a{
+  color: #3D3D3D;
+}
+
+.go-back a:hover {
+  text-decoration: none;
 }
 
 .badge {
@@ -152,7 +147,7 @@ a.footer:hover {
 .intro {
   font-size: 17px;
   font-weight: 300;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Tajawal', sans-serif;
   margin-top: 15px; 
   padding-bottom:15px;
 }
@@ -208,6 +203,10 @@ a.footer:hover {
 .blog-section .published {
   display: inline-block;
   font-family: "Inconsolata", sans-serif;
+  font-size: 15px;
+}
+
+.post-category {
   font-size: 14px;
 }
 
@@ -226,11 +225,11 @@ a.footer:hover {
 }
 
 .contact-page {
-  padding: 0em 0em 10em 0em;
+  padding: 5em 0em 10em 0em;
 }
 
 .home-recent-posts {
-  margin-bottom: 75px;
+  margin-bottom: 85px;
 }
 
 .arrow-link {
@@ -262,5 +261,9 @@ a.footer:hover {
   background: #3D3D3D;
   transition: width 0.2s ease 0s, left 0.2s ease 0s;
   width: 0;
+}
+
+.keep-in-mind {
+  border: transparent;
 }
 

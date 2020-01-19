@@ -3,7 +3,7 @@
 	<div class="article-title text-center">
 		<h2>{{ post.title }}</h2>
 		{% for category in post.category %}
-		    <a href="{{ url_for('category', name=category)}}" class="badge badge-light">
+		    <a href="{{ url_for('category', name=category)}}" class="post-category text-muted">
 		        {{ category }}
 	        </a>  
 		{% endfor %}
@@ -13,7 +13,7 @@
 	<div class="post-content">
 		{{ post.html|safe }}
 	</div>
-	<div class="go-back text-center">
-		<a href="{{ url_for('blog')}}" class="btn btn-sm blue-button" role="button">Go Back</a>	
+	<div class="go-back text-right">
+		<a href="{{ url_for('blog')}}" role="button">&#8592;&nbsp;back</a>	
 	</div>
 {% endblock %} 

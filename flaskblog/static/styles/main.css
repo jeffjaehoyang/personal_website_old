@@ -1,7 +1,7 @@
 body {
   background: #fffffc;
   color: #3D3D3D;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .onthetop {
@@ -147,7 +147,7 @@ a.footer:hover {
 .intro {
   font-size: 17px;
   font-weight: 300;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-top: 15px; 
   padding-bottom:15px;
 }
@@ -229,7 +229,7 @@ a.footer:hover {
 }
 
 .home-recent-posts {
-  margin-bottom: 85px;
+  margin-bottom: 60px;
 }
 
 .arrow-link {
@@ -265,5 +265,6 @@ a.footer:hover {
 
 .keep-in-mind {
   border: transparent;
+  padding-top: 1em;
 }
 

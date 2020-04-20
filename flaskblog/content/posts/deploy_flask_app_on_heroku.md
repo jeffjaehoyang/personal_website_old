@@ -1,6 +1,6 @@
 author: Jeff Yang
 title: Go Live With Your Flask Application on Heroku
-category: [Flask, Python, Deployment, Tutorial]
+category: [Flask, Tutorial]
 summary: A walk through of how to deploy your Flask application on Heroku.
 published: 2019-11-01
 minread: 7 mins
@@ -31,7 +31,7 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 <br>
-Note that the last command above installs into the virtual environment all the dependencies that the project needs to run properly. Once you run the commands above, we are ready get started.  
+Note that the last command above installs into the virtual environment all the dependencies that the project needs to run properly. Once you run the commands above, we are ready to get started.  
 <br>
 ##### 3. Starter
 First, you will need to download the Heroku CLI. For more information, please take a look [here](https://devcenter.heroku.com/articles/heroku-cli#download-and-install). During this process, you should have been prompted to create a Heroku account (please make sure you do, you'll need that!) This first step should have been relatively simple and straightforward. Once you download the Heroku CLI, you will have to login.<br>

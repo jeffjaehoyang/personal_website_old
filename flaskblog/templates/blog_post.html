@@ -1,14 +1,14 @@
 {% extends "layouts.html" %}
 {% block content %}
 	<div class="article-title text-center">
-		<h2>{{ post.title }}</h2>
+		<h3 class="post-title">{{ post.title }}</h3>
 		{% for category in post.category %}
 		    <a href="{{ url_for('category', name=category)}}" class="post-category text-muted">
 		        {{ category }}
 	        </a>  
 		{% endfor %}
-		•&nbsp;<small class="text-muted">{{ post.minread }}</small>
-		•&nbsp;<small class="text-muted">{{ post.published }}</small>
+		<small class="text-muted">•&nbsp;{{ post.minread }}</small>
+		<small class="text-muted">•&nbsp;{{ post.published }}</small>
 	</div>
 	<div class="post-content">
 		{{ post.html|safe }}

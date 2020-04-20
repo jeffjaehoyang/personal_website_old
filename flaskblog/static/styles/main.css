@@ -1,12 +1,17 @@
 body {
-  background: #fffffc;
-  color: #3D3D3D;
-  font-family: 'Source Sans Pro', sans-serif;
+  background: #ffffff;
+  color: rgb(82, 82, 82);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.post-title {
+  color:rgb(118, 093, 160);
 }
 
 .onthetop {
-  height: 0.2em;
-  background-color: #7299a1;
+  height: 0.3em;
+  background-color: rgb(118, 093, 160);
   margin: 0;
   padding: 0.1em 0.1em 0.2em;
 }
@@ -24,6 +29,7 @@ body {
 
 .site-header .navbar-brand {
   font-size: 20px;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -34,7 +40,7 @@ body {
 }
 
 .site-header .navbar-nav .nav-item:hover {
-  color: #7299a1;
+  color: rgb(118, 093, 160);
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -72,6 +78,7 @@ a.article-title:hover {
 
 .post-content {
   margin-bottom: 50px;
+  font-size: 15px;
 }
 
 .article-img {
@@ -119,7 +126,7 @@ a.footer-linkedin {
 }
 
 a.footer:hover {
-  color: #7299a1;
+  color: rgb(118, 093, 160);
 }
 
 .card {
@@ -145,15 +152,14 @@ a.footer:hover {
 }
 
 .intro {
-  font-size: 17px;
-  font-weight: 300;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 200;
   margin-top: 15px; 
   padding-bottom:15px;
 }
 
 .intro .personal {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -162,7 +168,7 @@ a.footer:hover {
 }
 
 .blog-section h5 {
-  color: #7299a1;
+  color: rgb(118, 093, 160);
 }
 
 .blog-section-posts {
@@ -171,6 +177,7 @@ a.footer:hover {
 
 .blog-section-posts a{
   color: #3D3D3D;
+  font-size: 15px;
   position: relative;
   text-decoration: none;
 }

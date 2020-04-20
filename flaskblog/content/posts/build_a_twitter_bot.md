@@ -1,6 +1,6 @@
 author: Jeff Yang
 title: Tweet Bot with Tweepy & Flask
-category: [Flask, Python, API, Tutorial]
+category: [Flask, Tutorial]
 published: 2019-11-14
 summary: Meet "Three Word Philosopher" - Tweepy and Flask powered Tweet bot!
 minread: 15 mins

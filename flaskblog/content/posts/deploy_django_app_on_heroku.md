@@ -12,7 +12,7 @@ minread: 15 mins
     >
 </div>
 <br>
-Disclaimer: This blog post is largely a quaratine coding production. 
+Disclaimer: This blog post is largely a quarantine coding production. 
 
 I already have a blog post on how to deploy a very simple Flask application on Heroku. In this blog post, I will explore more details of Heroku deployment, but this time with Django. I have been working on a Django & Channels side project, a web platform to enhance off-campus room searching experience for Northwestern students. As the application development was almost over and user testing seemed like the logical next step to take, I turned my eyes to Heroku (largely for their known simplicity compared to other services such as AWS or Linode). It turned out that there were a few curveballs thrown at me, largely due to Channels using an ASGI server rather than a traditional Python WSGI server. I hope this blog post serves as a future reference for myself, and for a few other friends out there that may be facing similar problems that I did. 
 <br><br>

@@ -40,13 +40,13 @@ Software Engineer, Intern
 <h4>Software Projects</h4> 
 <hr>
 
-<strong>Housing-NU : https://housing-nu.herokuapp.com (Founder & Lead Developer)</strong>  
+<strong>Housing-NU: https://www.sublets.nu (Founder & Lead Developer)</strong>  
 <ul>
 	<li>Initiated a project to solve problems in the domain of student housing search</li>
 	<li>Architected the web software infrastructure (Django, Django Channels, Daphne, PostgreSQL, AWS)</li>
 	<li>Integrated a chat application built from scratch with Django Channels </li>
 	<li>Managed application deployment on Heroku and AWS </li>
-	<li><strong>Utilized:</strong>Git, Python, Django, Django Channels, PostgreSQL, Bootstrap, JavaScript, jQuery, HTML/CSS</li>
+	<li><strong>Utilized:</strong>Git, Python, Django, JavaScript, jQuery, PostgreSQL, AWS, HTML/CSS</li>
 </ul>
 
 <strong>Personal Website: https://www.jeffyangme.com</strong>
@@ -75,5 +75,5 @@ Software Engineer, Intern
 <br>
 <h4>Skills</h4>
 <hr>
-<strong>Proficient in</strong> Python, JavaScript (React, Redux, Node.js), Git  
-<strong>Familiar with</strong> SQL, C++, Java, HTML/CSS   
+<strong>Proficient in</strong> Python, JavaScript, HTML/CSS, Git  
+<strong>Familiar with</strong> SQL, C++, Java, Go 

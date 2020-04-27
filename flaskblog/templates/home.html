@@ -3,7 +3,7 @@
 	<div class="intro">
 	    <img
 	        class="account-img img-fluid" 
-	        src="../static/upload/my_avataar2.jpg" 
+	        src="../static/upload/jeffyang.png" 
 	    ><span class="personal">Personal blog by Jeff Yang.</span>
 	    </p> 
 	    <p>Hi, I am Jeff, a college student.<br>
@@ -25,12 +25,12 @@
   	    </p>
   	</div>
 	<hr>
-	<h4><strong>Recent posts</strong></h4>
+	<h4 class="page-title"><strong>Recent posts</strong></h4>
 	<br>
 	{% for post in posts %}
 		<div class="home-recent-posts">
 	      <div>
-	      	<h5><strong>{{ post.title }}</strong></h5>
+	      	<h5 class="home-post-title"><strong>{{ post.title }}</strong></h5>
 	        <!-- <i class="fas fa-tags fa-sm"></i>  -->
 		    {% for category in post.category %}
 	    	    <a href="{{ url_for('category', name=category)}}" class="post-category text-muted">
@@ -48,7 +48,7 @@
 	    </div>
 	{% endfor %}
 	<hr>
-	<h4><strong>I keep in mind...</strong></h4>
+	<h4 class="page-title"><strong>I keep in mind...</strong></h4>
 	<br><br>
 	<div class="row">
 	  <div class="col-sm-4">

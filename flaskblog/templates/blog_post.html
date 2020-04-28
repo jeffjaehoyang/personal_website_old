@@ -2,13 +2,8 @@
 {% block content %}
 	<div class="article-title text-center">
 		<h3 class="post-title">{{ post.title }}</h3>
-		{% for category in post.category %}
-		    <a href="{{ url_for('category', name=category)}}" class="post-category text-muted">
-		        {{ category }}
-	        </a>  
-		{% endfor %}
-		<small class="text-muted">•&nbsp;{{ post.minread }}</small>
-		<small class="text-muted">•&nbsp;{{ post.published }}</small>
+		<i class="text-muted" style="font-size: 15px;">written on {{ post.published }}</i>
+		<small class="text-muted" style="font-size: 15px;">•&nbsp;{{ post.minread }} read</small>
 	</div>
 	<div class="post-content">
 		{{ post.html|safe }}

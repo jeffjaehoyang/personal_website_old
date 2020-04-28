@@ -3,7 +3,7 @@ title: Balanced Binary Tree - Leetcode
 category: [Leetcode]
 published: 2019-11-09
 summary: How do we check if a binary tree is balanced or not? Explained in Python.
-minread: 8 mins
+minread: 8 min
 
 <br>
 This is the second post of the algorithms series, and this time I would like to share a classic algorithms problem related to binary trees. In this post, we are going to examine how to check if a binary tree is balanced.  

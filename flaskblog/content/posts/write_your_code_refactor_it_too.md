@@ -3,7 +3,7 @@ author: Jeff Yang
 published: 2019-04-28
 category: [Internship]
 summary: My first SWE internship, I'd like to think I definitely learned a lot from this one.
-minread: 5 mins
+minread: 5 min
 
 <br>
 Summer 2017 Knowru SWE Internship

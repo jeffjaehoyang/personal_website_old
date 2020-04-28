@@ -3,7 +3,7 @@ title: Finding the Shortest Path From A to Anywhere
 category: [Data Structures & Algorithms]
 summary: Traversing the graph with purpose, with some help from Dijkstra.
 published: 2019-12-15
-minread: 7 mins
+minread: 7 min
 
 <br>
 In this post, I would like to take a slightly different approach and write about an algorithm that I learned about in a classroom setting. While taking a computer science course in data structures and algorithms this quarter, I found the graph data structure and related algorithms to be particularly fascinating, as graphs can be applied in real-life to represent virtually anything from friendships to geographic maps. Although far from being an expert on this topic, I am going to make an attempt to dissect perhaps the most famous graph algorithm and its practical application. Take a bow, introducing Dijkstra's algorithm and the single source shortest path problem.  

@@ -11,7 +11,7 @@
 			{% if 'Leetcode' in post.category %}
 				<div class="blog-section-posts">
 					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }} read
 				</div>
 			{% endif %}
 		{% endfor %}
@@ -23,7 +23,7 @@
 			{% if 'Data Structures & Algorithms' in post.category %}
 				<div class="blog-section-posts">
 					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }} read
 				</div>
 			{% endif %}
 		{% endfor %}
@@ -35,7 +35,7 @@
 			{% if 'Tutorial' in post.category %}
 				<div class="blog-section-posts">
 					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }} read
 				</div>
 			{% endif %}
 		{% endfor %}
@@ -47,7 +47,7 @@
 			{% if 'Internship' in post.category %}
 				<div class="blog-section-posts">
 					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }}
+					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>&nbsp;•&nbsp;{{ post.minread }} read
 				</div>
 			{% endif %}
 		{% endfor %}

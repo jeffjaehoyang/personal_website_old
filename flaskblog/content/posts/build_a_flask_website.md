@@ -3,7 +3,7 @@ title: Build Your Own Website with Flask
 category: [Flask, Tutorial]
 summary: This site that I created is surely a lot faster than my previous Wordpress site!
 published: 2019-10-26
-minread: 15 mins
+minread: 15 min
 
 <div class="container">
     <img

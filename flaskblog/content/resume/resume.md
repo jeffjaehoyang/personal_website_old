@@ -40,16 +40,15 @@ Software Engineer, Intern
 <h4>Software Projects</h4> 
 <hr>
 
-<strong>Sublets.nu: https://www.sublets.nu (Founder & Lead Developer)</strong>
+<strong>Sublets.nu: [https://www.sublets.nu](https://www.sublets.nu) (Founder & Lead Developer)</strong>
 <ul>
-	<li>Initiated a project to solve problems in the domain of student housing search</li>
-	<li>Architected the web software infrastructure (Django, Django Channels, Daphne, PostgreSQL, AWS)</li>
-	<li>Integrated a chat application built from scratch with Django Channels </li>
-	<li>Managed application deployment on Heroku and AWS </li>
-	<li><strong>Utilized:</strong>Git, Python, Django, JavaScript, jQuery, PostgreSQL, AWS S3, AWS CloudFront, AWS Lambda, HTML/CSS</li>
+	<li>Built online booking site that streamlines the off-campus housing search, overseeing production from beginning to end</li>
+	<li>Managed the application development process from local development to product deployment on Heroku and AWS.</li>
+	<li>Produced and integrated a chat application from scratch utilizing Django Channels.</li>
+	<li><strong>Utilized:</strong>Git, Python, Django, JavaScript, jQuery, PostgreSQL, AWS Lambda, AWS S3, AWS CloudFront, Heroku</li>
 </ul>
 
-<strong>Personal Website: https://www.jeffyangme.com</strong>
+<strong>Personal Website: [https://www.jeffyangme.com](https://www.jeffyangme.com)</strong>
 <ul>
 	<li>Built a personal website from scratch using Python’s Flask micro-framework</li>
 	<li>Integrated a flat text-file objectifying Flask extension “Flask-Flatpages” for posting markdown files</li>
@@ -57,7 +56,7 @@ Software Engineer, Intern
 	<li><strong>Utilized:</strong> Python, Flask, Linux, Nginx, Gunicorn, SQLAlchemy, HTML/CSS</li>
 </ul>
 
-<strong>Tweet Bot: https://threewordthinker-api-heroku.herokuapp.com</strong>
+<strong>Tweet Bot: [https://threewordthinker-api-heroku.herokuapp.com](https://threewordthinker-api-heroku.herokuapp.com)</strong>
 <ul>
 	<li>Built an automated tweet bot using Python’s Tweepy library to access Twitter API</li>
 	<li>Implemented a three-word-sentence generator by web scraping an e-book, cleaning up scraped data, categorizing words into three different lists to put as the first, middle, and last word of a randomly generated sentence</li>

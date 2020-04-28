@@ -12,6 +12,17 @@ body {
   line-height: 1.8em;
 }
 
+.resume-content a,
+.post-content a {
+  color: var(--themeColor);
+  text-decoration: underline;
+}
+
+.resume-content a:hover,
+.post-content a:hover {
+  color: var(--themeColor);
+}
+
 .post-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -152,10 +163,6 @@ a.footer:hover {
 
 .go-back a{
   color: var(--fontColor);
-}
-
-.go-back a:hover {
-  text-decoration: none;
 }
 
 .badge {

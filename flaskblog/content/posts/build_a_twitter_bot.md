@@ -3,7 +3,7 @@ title: Tweet Bot with Tweepy & Flask
 category: [Flask, Tutorial]
 published: 2019-11-14
 summary: Meet "Three Word Philosopher" - Tweepy and Flask powered Tweet bot!
-minread: 15 mins
+minread: 15 min
 
 <div class="container">
     <img

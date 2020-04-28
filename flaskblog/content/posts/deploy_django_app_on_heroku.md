@@ -3,7 +3,7 @@ title: Django Channels 2.0, Postgres, Daphne, and Heroku
 category: [Django, Tutorial]
 summary: A detailed walk-through of how to deploy a Django ASGI application on Heroku.
 published: 2020-04-20
-minread: 15 mins
+minread: 15 min
 
 <div class="container">
     <img

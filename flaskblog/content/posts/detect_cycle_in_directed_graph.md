@@ -3,7 +3,7 @@ title: Detect a Cycle in a Directed Graph - Leetcode
 category: [Leetcode]
 published: 2019-11-24
 summary: How can we check for a cycle in a directed graph?
-minread: 10 mins
+minread: 10 min
 
 <br>
 This is the third post of the algorithms series, and this time I would like to share a classic algorithms problem related to graphs. In this post, we are going to examine how to detect a cycle in a directed graph.  

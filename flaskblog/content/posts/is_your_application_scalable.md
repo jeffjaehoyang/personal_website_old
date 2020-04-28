@@ -3,7 +3,7 @@ title: Shipping Code for a Business – Is Your Application Scalable?
 published: 2019-09-09
 category: [Internship]
 summary: Reflecting back on 2019 Summer SWE internship at Knowru. 
-minread: 3 mins
+minread: 3 min
 
 <br>
 Summer 2019 Knowru SWE Internship

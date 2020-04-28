@@ -3,7 +3,7 @@ title: Go Live With Your Flask Application on Heroku
 category: [Flask, Tutorial]
 summary: A walk through of how to deploy your Flask application on Heroku.
 published: 2019-11-01
-minread: 7 mins
+minread: 7 min
 
 <div class="container">
     <img

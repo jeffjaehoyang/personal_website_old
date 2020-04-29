@@ -37,7 +37,7 @@ body {
 
 .onthetop {
   height: 0.3em;
-  background: linear-gradient( 90deg, #c9c3e6 0%, #6762a6 100% );
+  background: var(--themeColor);
   margin: 0;
   padding: 0.1em 0.1em 0.2em;
 }

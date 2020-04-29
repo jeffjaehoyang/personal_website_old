@@ -35,7 +35,7 @@
 
 	<main role="main" class="container">
 		<div class="row">
-			<div class="site-header col-md-8" style="float:none; margin:auto;">
+			<div class="site-header col-md-7" style="float:none; margin:auto;">
 			  	<nav class="navbar navbar-expand-md navbar-light">
 					<a class="navbar-brand" href="/">
 			      	    <!-- <img src="../static/sitelogo.png" width="35" height="35" class="d-inline-block align-middle"> -->
@@ -56,7 +56,7 @@
 				</nav>
 	  		</div>
 	  	
-		    <div class="col-md-8" style="float:none; margin:auto;">
+		    <div class="col-md-7" style="float:none; margin:auto;">
 		    	{% with messages = get_flashed_messages(with_categories=true) %}
 			      	{% if '/contact' not in request.path and messages %}
 			      		{% for category, message in messages %}

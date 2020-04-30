@@ -23,6 +23,15 @@ body {
   color: var(--themeColor);
 }
 
+.news-post {
+  margin-bottom: 15px;
+}
+
+.news span a {
+  color: var(--fontColor);
+  background-color: #c9c3e6;
+}
+
 .post-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;

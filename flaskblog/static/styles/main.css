@@ -1,12 +1,23 @@
-/* colors for global configuration */
-:root {
-  --themeColor: #6762a6;
+.dark {
+  --fontColor: #ffffff;
+  --backgroundColor: rgba(21, 26, 36, 1);
+  --navbarFontColor: #ffffff;
+  --navbarBrandColor: #ffffff;
+  --themeColor: #c9c3e6;
+  --publishColor: rgb(104, 076, 150);
+}
+
+.light {
   --fontColor: #3D3D3D;
-  --backgroundColor: rgb(255, 255, 255);
+  --backgroundColor: rgba(255, 255, 255, 1);
+  --navbarFontColor: #5c5d5e;
+  --navbarBrandColor: #000000;
+  --themeColor: #6762a6;
+  --publishColor: #c9c3e6;
 }
 
 body {
-  background-color: var(--backgroundColor)
+  background-color: var(--backgroundColor);
   color: var(--fontColor);
   font-family: 'Merriweather', sans-serif;
   line-height: 1.8em;
@@ -29,7 +40,7 @@ body {
 
 .news span a {
   color: var(--fontColor);
-  background-color: #c9c3e6;
+  background-color: var(--publishColor);
 }
 
 .post-title {
@@ -65,11 +76,15 @@ body {
 .site-header .navbar-brand {
   font-size: 20px;
   font-weight: 400;
-  color: #000000;
+  color: var(--navbarBrandColor);
+}
+
+.site-header .navbar-brand:hover {
+  color: var(--navbarBrandColor);
 }
 
 .site-header .navbar-nav .nav-item {
-  color: #5c5d5e;
+  color: var(--navbarFontColor);
   font-size: 14px;
   font-weight: 400;
 }
@@ -139,7 +154,7 @@ a.article-title:hover {
 .layout-footer {
   text-align: center; 
   padding-top: 170px; 
-  padding-bottom: 50px;"
+  padding-bottom: 50px;
 }
 
 a.footer {
@@ -157,7 +172,7 @@ a.footer-linkedin {
 }
 
 a.footer:hover {
-  color: rgb(118, 093, 160);
+  color: var(--themeColor);
 }
 
 .card {
@@ -247,9 +262,12 @@ a.footer:hover {
 }
 
 .project-card {
-  min-height: 370px;
+  color: #3D3D3D;
+  min-height: 400px;
+  max-height: 400px;
   border: transparent;
   border-radius: 20px;
+  padding: 1em;
 }
 
 .project-card img{
@@ -257,7 +275,12 @@ a.footer:hover {
 }
 
 .project-card a{
-  color: var(--fontColor);
+  color: #3D3D3D;
+}
+
+.project-card p {
+  color: #3D3D3D;
+  font-size: 14px;
 }
 
 .contact-page {
@@ -304,3 +327,16 @@ a.footer:hover {
   padding-top: 1em;
 }
 
+#themeButton {
+  background-color: transparent;
+  border: none;
+  font-size: 20px; 
+}
+
+#themeIcon {
+  color: var(--fontColor);
+}
+
+button:focus {
+  outline: 0;
+}

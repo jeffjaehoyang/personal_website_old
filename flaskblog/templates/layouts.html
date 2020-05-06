@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/pygs.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="light">
 	<header class="site-header">
 		<div class="onthetop"></div>
 	</header>
@@ -50,7 +50,8 @@
 				          <a class="nav-item nav-link" href="{{ url_for('blog' )}}">Blog</a>
 				          <a class="nav-item nav-link" href="{{ url_for('projects' )}}">Projects</a>
 				          <a class="nav-item nav-link" href="{{ url_for('resume' )}}">Resume</a>
-				          <a class="nav-item nav-link" href="{{ url_for('contact' )}}">Contact</a>	          
+									<a class="nav-item nav-link" href="{{ url_for('contact' )}}">Contact</a>
+									<button id="themeButton"><i class="fal fa-eclipse" id="themeIcon"></i></button>	          
 				        </div>
 				    </div>
 				</nav>
@@ -96,18 +97,52 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script>
-	$(document).ready(function() {
-		 // executes when HTML-Document is loaded and DOM is ready
-		if (window.location.pathname == '/projects') {
-			$( ".card" ).hover(
-			  function() {
-			    $(this).addClass('shadow-lg'); 
-			  }, function() {
-			    $(this).removeClass('shadow-lg');
-			  }
-			);  
-		}
-	});
-	</script>
+			$(document).ready(function() {
+				// executes when HTML-Document is loaded and DOM is ready
+				if (window.location.pathname == '/projects') {
+					$( ".card" ).hover(
+						function() {
+							$(this).addClass('shadow-lg'); 
+						}, function() {
+							$(this).removeClass('shadow-lg');
+						}
+					);  
+				}
+			});
+		</script>
+		<script>
+			const themeMap = {
+				"dark" : "light",
+				"light" : "dark",
+			}
+			const body = document.querySelector('body');
+			const bodyClass = body.classList;
+
+			function setTheme(themeName) {
+				localStorage.setItem('theme', themeName);
+				body.className = themeName;
+			}
+
+			// Change the theme on a button click
+			function toggleTheme() {
+				console.log(localStorage)
+				if (localStorage.getItem('theme') === 'dark'){
+					setTheme('light');
+				} else {
+					setTheme('dark');
+				}
+			}
+
+			document.getElementById('themeButton').onclick = toggleTheme;
+
+			// Immediately invoked function to set the theme on initial load
+			(function () {
+				if (localStorage.getItem('theme') === 'dark') {
+						setTheme('dark');
+				} else {
+						setTheme('light');
+				}
+			})();
+		</script>
 </body>
 </html> 

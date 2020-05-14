@@ -1,5 +1,5 @@
 author: Jeff Yang
-title: Spiral Matrix - Leetcode
+title: Spiral Matrix
 category: [Leetcode]
 published: 2019-09-21
 summary: Some JavaScript code on how to solve the famous "spiral matrix" problem.

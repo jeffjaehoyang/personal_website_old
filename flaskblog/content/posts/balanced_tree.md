@@ -1,5 +1,5 @@
 author: Jeff Yang
-title: Balanced Binary Tree - Leetcode
+title: Balanced Binary Tree
 category: [Leetcode]
 published: 2019-11-09
 summary: How do we check if a binary tree is balanced or not? Explained in Python.

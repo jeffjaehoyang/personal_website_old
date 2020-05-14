@@ -1,5 +1,5 @@
 author: Jeff Yang
-title: Detect a Cycle in a Directed Graph - Leetcode
+title: Detect a Cycle in a Directed Graph
 category: [Leetcode]
 published: 2019-11-24
 summary: How can we check for a cycle in a directed graph?

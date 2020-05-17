@@ -1,6 +1,6 @@
 .dark {
   --fontColor: #ffffff;
-  --backgroundColor: rgba(21, 26, 36, 1);
+  --backgroundColor: rgba(40, 44, 54, 1);
   --navbarFontColor: #ffffff;
   --navbarBrandColor: #ffffff;
   --themeColor: #c9c3e6;
@@ -266,6 +266,7 @@ a.footer:hover {
   min-height: 400px;
   max-height: 400px;
   border: transparent;
+  box-shadow: 0px 1px 1px 1px grey;
   border-radius: 20px;
   padding: 1em;
 }

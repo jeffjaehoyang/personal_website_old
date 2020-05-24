@@ -40,7 +40,7 @@ body {
 
 .news span a {
   color: var(--fontColor);
-  background-color: var(--publishColor);
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, var(--publishColor) 50%);
 }
 
 .post-title {
@@ -266,7 +266,8 @@ a.footer:hover {
   min-height: 400px;
   max-height: 400px;
   border: transparent;
-  box-shadow: 0px 1px 1px 1px grey;
+  background: #f6f7fd;
+  /* box-shadow: 0px 1px 1px 1px grey; */
   border-radius: 20px;
   padding: 1em;
 }
@@ -282,6 +283,10 @@ a.footer:hover {
 .project-card p {
   color: #3D3D3D;
   font-size: 14px;
+}
+
+.card-img-top {
+  background-color: white;
 }
 
 .contact-page {

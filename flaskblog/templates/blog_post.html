@@ -2,8 +2,8 @@
 {% block content %}
 	<div class="article-title text-center">
 		<h3 class="post-title">{{ post.title }}</h3>
-		<i class="text-muted" style="font-size: 15px;">written on {{ post.published }}</i>
-		<small class="text-muted" style="font-size: 15px;">•&nbsp;{{ post.minread }} read</small>
+		<span style="font-size: 15px;">{{ post.published }}</span>
+		<span style="font-size: 15px;">•&nbsp;{{ post.minread }} read</span>
 	</div>
 	<div class="post-content">
 		{{ post.html|safe }}

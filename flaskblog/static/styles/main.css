@@ -265,30 +265,6 @@ a.footer:hover {
   font-size: 14px;
 }
 
-.project-card {
-  color: #3D3D3D;
-  min-height: 400px;
-  max-height: 400px;
-  border: transparent;
-  background: #f6f7fd;
-  /* box-shadow: 0px 1px 1px 1px grey; */
-  border-radius: 20px;
-  padding: 1em;
-}
-
-.project-card img{
-  border-radius: 20px;
-}
-
-.project-card a{
-  color: #3D3D3D;
-}
-
-.project-card p {
-  color: #3D3D3D;
-  font-size: 14px;
-}
-
 .project-ind-item {
   margin-bottom: 3em;
 }
@@ -304,12 +280,11 @@ a.footer:hover {
   text-align: center;
   margin-top: 1em;
   line-height: 2em;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--fontColor);
   background-color: var(--projectDescriptionColor);
   border: transparent;
-  border-radius: 0.6rem;
-  max-width: 110px;
+  max-width: 100px;
   margin-bottom: 1em;
 }
 

@@ -1,83 +1,110 @@
 {% extends "layouts.html" %}
 {% block content %}
 	<h3 class="page-title"><strong>Projects</strong></h3><br>
-	<div class="row project-display">
-	  <div class="col-lg-6">
-		<div class="card project-card">
-		  <img src="../static/upload/housing_nu_project.png" class="card-img-top">
-			<div class="card-body">
-			  <h5 class="card-title">
-				<a href="https://www.sublets.nu">
-				  <strong>Sublets.nu</strong>
-				</a>
-			  </h5>
-			 <p class="card-text">
-				Northwestern University's Off-Campus Room Finding Platform.
-				Made by students, for the students.
-			 </p>
+	<div class="project-display">
+		<div class="row project-ind-item col-xs-12">
+			<div class="project-title col-xs-12 col-md-3">
+				<span>Sublets.nu</span>
+				<div>development</div>
+			</div>
+			<div class="project-description col-xs-12 col-md-9">
+				<span>
+					This application started out as a Northwestern-IEEE team project. 
+					Our team identified a clear problem that could possibly be solved through student efforts; 
+					to enhance off-campus room searching experience for the Northwestern University community. 
+					Currently, the team moved off the Northwestern-IEEE boundary, 
+					and has largely evolved into a separate team project. (Source code is currently private)
+				</span>
+				<div class="project-results">
+					<span class="project-results-item mr-4">
+						<a href="https://www.sublets.nu" style="text-decoration: none; color: var(--fontColor)">
+							<i class="fal fa-link mr-2"></i>Link
+						</a>
+					</span>
+				</div>
 			</div>
 		</div>
-	  </div>
-	  <div class="col-lg-6">
-	    <div class="card project-card">
-	      <img src="../static/upload/twitter.png" class="card-img-top">
-	      <div class="card-body">
-	        <h5 class="card-title">
-	        	<a href="https://threewordthinker-api-heroku.herokuapp.com">
-	        		<strong>Three Word Philosopher</strong>
-	        	</a>
-	        </h5>
-	        <p class="card-text">
-						A simple tweet bot built through web-scraped repository of words, and an interface on a web application. Tweets every day at 19:39.
-	        </p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-lg-6">
-	    <div class="card project-card">
-	      <img src="../static/upload/pythongmail.png" class="card-img-top">
-	      <div class="card-body">
-	        <h5 class="card-title">
-	        	<a href="https://github.com/jeffjaehoyang/email_scraper">
-	        		<strong>Email to Local Machine</strong>
-	        	</a>
-	        </h5>
-	        <p class="card-text">
-	        	A python script to download email content to local machine, and save as file in a designated directory.
-	        </p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-lg-6">
-	    <div class="card project-card">
-	      <img src="../static/upload/twilio-owm.png" class="card-img-top">
-	      <div class="card-body">
-	        <h5 class="card-title">
-	        	<a href="https://github.com/jeffjaehoyang/weather_notifier">
-	        		<strong>Bring Your Umbrella</strong>
-	        	</a>
-	        </h5>
-	        <p class="card-text">
-	        	SMS bot that notifies designated recepients if there is a need for an umbrella. Temperature notification is a bonus!
-	        </p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-lg-6">
-	    <div class="card project-card">
-	      <img src="../static/upload/pig_dice.png" class="card-img-top">
-	      <div class="card-body">
-	        <h5 class="card-title">
-	        	<a href="https://my-pig-dice-game.herokuapp.com/">
-	        		<strong>Pig Dice Game</strong>
-	        	</a>
-	        </h5>
-	        <p class="card-text">
-	        	Simple pig dice game for two users (non-mobile responsive). Implemented with HTML, CSS, Vanilla JavaScript only. UI credits to @JonasSchmedtmann. 
-	        </p>
-	      </div>
-	    </div>
-	  </div>
+		<div class="row project-ind-item col-xs-12">
+			<div class="project-title col-xs-12 col-md-3">
+				<span>Three Word Philosopher</span>
+				<div>development</div>
+			</div>
+			<div class="project-description col-xs-12 col-md-9">
+				<span>
+					A simple tweet bot built through web-scraped repository of words, 
+					and an interface on a web application. Tweets every day at 19:39.
+				</span>
+				<div class="project-results">
+					<span class="project-results-item mr-4">
+						<a href="https://threewordthinker-api-heroku.herokuapp.com" style="text-decoration: none; color: var(--fontColor)">
+							<i class="fal fa-link mr-2"></i>Link
+						</a>
+					</span>
+					<span class="project-results-item mr-4">
+						<a href="https://github.com/jeffjaehoyang/twitter_bot" style="text-decoration: none; color: var(--fontColor)">
+							<i class="fal fa-brackets-curly mr-2"></i>Code
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="row project-ind-item col-xs-12">
+			<div class="project-title col-xs-12 col-md-3">
+				<span>Email to Local Machine</span>
+				<div>development</div>
+			</div>
+			<div class="project-description col-xs-12 col-md-9">
+				<span>
+					A python script to download email content to local machine, and save as file in a designated directory.
+				</span>
+				<div class="project-results">
+					<span class="project-results-item mr-4">
+						<a href="https://github.com/jeffjaehoyang/email_scraper" style="text-decoration: none; color: var(--fontColor)">
+							<i class="fal fa-brackets-curly mr-2"></i>Code
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="row project-ind-item col-xs-12">
+			<div class="project-title col-xs-12 col-md-3">
+				<span>Bring Your Umbrella</span>
+				<div>development</div>
+			</div>
+			<div class="project-description col-xs-12 col-md-9">
+				<span>
+					SMS bot that notifies designated recepients if there is a need for an umbrella. Made with Python, using Twilio's fantastic API. 
+					Temperature notification is a bonus!
+				</span>
+				<div class="project-results">
+					<span class="project-results-item mr-4">
+						<a href="https://github.com/jeffjaehoyang/weather_notifier" style="text-decoration: none; color: var(--fontColor)">
+							<i class="fal fa-brackets-curly mr-2"></i>Code
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="row project-ind-item col-xs-12">
+			<div class="project-title col-xs-12 col-md-3">
+				<span>Pig Dice Game</span>
+				<div>development</div>
+			</div>
+			<div class="project-description col-xs-12 col-md-9">
+				<span>
+					Simple pig dice game for two users (non-mobile responsive). 
+					Implemented with HTML, CSS, Vanilla JavaScript only. 
+					UI credits to @JonasSchmedtmann.
+				</span>
+				<div class="project-results">
+					<span class="project-results-item mr-4">
+						<a href="https://my-pig-dice-game.herokuapp.com/" style="text-decoration: none; color: var(--fontColor)">
+							<i class="fal fa-link mr-2"></i>Link
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
 	</div>
 	<br><br>
 {% endblock %} 

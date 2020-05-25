@@ -5,6 +5,8 @@
   --navbarBrandColor: #ffffff;
   --themeColor: #c9c3e6;
   --publishColor: rgb(104, 076, 150);
+  --projectDescriptionColor: #7b9c9b;
+  --projectHighlightColor: #997f30;
 }
 
 .light {
@@ -14,6 +16,8 @@
   --navbarBrandColor: #000000;
   --themeColor: #6762a6;
   --publishColor: #c9c3e6;
+  --projectDescriptionColor: #d8efee;
+  --projectHighlightColor: #f5dfbc;
 }
 
 body {
@@ -283,6 +287,39 @@ a.footer:hover {
 .project-card p {
   color: #3D3D3D;
   font-size: 14px;
+}
+
+.project-ind-item {
+  margin-bottom: 3em;
+}
+
+.project-title span {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--fontColor);
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, var(--publishColor) 50%);
+}
+
+.project-title div {
+  text-align: center;
+  margin-top: 1em;
+  line-height: 2em;
+  font-size: 14px;
+  color: var(--fontColor);
+  background-color: var(--projectDescriptionColor);
+  border: transparent;
+  border-radius: 0.6rem;
+  max-width: 110px;
+  margin-bottom: 1em;
+}
+
+.project-results {
+  margin-top: 1em;
+  display: flex;
+}
+
+.project-results-item {
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, var(--projectHighlightColor) 50%);
 }
 
 .card-img-top {

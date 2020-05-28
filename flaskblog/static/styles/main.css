@@ -7,6 +7,7 @@
   --publishColor: rgb(104, 076, 150);
   --projectDescriptionColor: #7b9c9b;
   --projectHighlightColor: #997f30;
+  --codeColor: #373c49;
 }
 
 .light {
@@ -18,6 +19,7 @@
   --publishColor: #c9c3e6;
   --projectDescriptionColor: #d8efee;
   --projectHighlightColor: #f5dfbc;
+  --codeColor: #fffae1;
 }
 
 body {
@@ -25,6 +27,12 @@ body {
   color: var(--fontColor);
   font-family: 'Merriweather', sans-serif;
   line-height: 1.8em;
+}
+
+code {
+  background-color: var(--codeColor);
+  padding: 3px 5px 3px 5px;
+  border-radius: 0.3rem;
 }
 
 .resume-content a,

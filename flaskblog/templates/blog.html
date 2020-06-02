@@ -1,26 +1,14 @@
 {% extends "layouts.html" %}
 {% block content %}
-	<h3 class="page-title"><strong>Words & Code.</strong></h3><br>
+	<h3 class="page-title"><strong>Words & Code.</strong></h3><br><br>
 	{% if '/category' in request.path %}
 		<h4>[ {{ name }} ]</h4><br>
 	{% endif %}
 
 	<div class="blog-section">
-		<h5><strong>Algorithmic Problems</strong></h5>
-		{% for post in posts %}
-			{% if 'Leetcode' in post.category %}
-				<div class="blog-section-posts">
-					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>
-				</div>
-			{% endif %}
-		{% endfor %}
-	</div>
-
-	<div class="blog-section">
 		<h5><strong>Data Structures & Algorithms</strong></h5>
 		{% for post in posts %}
-			{% if 'Data Structures & Algorithms' in post.category %}
+			{% if 'Data Structures & Algorithms' in post.category or 'Leetcode' in post.category  %}
 				<div class="blog-section-posts">
 					<div class="published">{{ post.published }}</div>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
 					<a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}">{{ post.title }}</a>

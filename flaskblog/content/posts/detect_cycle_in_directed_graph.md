@@ -12,7 +12,7 @@ I specifically chose to write a blog post about this problem because it personal
 <br>
 **Problem Statement:** There are a total of *n* courses you have to take, labeled from *0* to *n-1*. Some courses may have prerequisites, for example to take course *0* you have to first take course *1*, which is expressed as a pair: *[0,1]*. Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses? (There are no duplicate edges in the input prerequisites)  
 <br>
-**Problem Source**: Leetcode - [Course Schedule](https://leetcode.com/problems/course-schedule/)  
+**Problem Source**: LeetCode - [Course Schedule](https://leetcode.com/problems/course-schedule/)  
 <br>
 **Examples:** 
 

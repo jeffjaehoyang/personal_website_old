@@ -12,11 +12,11 @@
 
 .light {
   --fontColor: #3D3D3D;
-  --backgroundColor: rgba(255, 255, 255, 1);
+  --backgroundColor: #fdfcfa;
   --navbarFontColor: #5c5d5e;
   --navbarBrandColor: #000000;
-  --themeColor: #6762a6;
-  --publishColor: #c9c3e6;
+  --themeColor: #1f364c;
+  --publishColor: #ffe1dd;
   --projectDescriptionColor: #d8efee;
   --projectHighlightColor: #f5dfbc;
   --codeColor: #fffae1;
@@ -33,6 +33,10 @@ code {
   background-color: var(--codeColor);
   padding: 3px 5px 3px 5px;
   border-radius: 0.3rem;
+}
+
+.theme-color {
+  color: var(--themeColor);
 }
 
 .resume-content a,
@@ -165,7 +169,7 @@ a.article-title:hover {
 
 .layout-footer {
   text-align: center; 
-  padding-top: 170px; 
+  padding-top: 100px; 
   padding-bottom: 50px;
 }
 

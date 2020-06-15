@@ -25,12 +25,12 @@
   	    </p>
   	</div>
 	<hr>
-	<h4 class="page-title"><strong>Recent posts</strong></h4>
+	<h4 class="page-title theme-color"><strong>Recent posts</strong></h4>
 	<br>
 	{% for post in posts %}
 		<div class="home-recent-posts">
 	      <div>
-	      	<h5 class="home-post-title"><strong>{{ post.title }}</strong></h5>
+	      	<h5 class="home-post-title theme-color"><strong>{{ post.title }}</strong></h5>
 	      	<small class="text-muted">{{ post.published }}</small>
 			<small class="text-muted">•&nbsp;{{ post.minread }} read</small><br>
 		    <p class="mt-2" style="font-size: 15px;">{{ post.summary }}</p>
@@ -43,7 +43,7 @@
 	{% endfor %}
 	<hr>
 	<div class="blog-section news">
-		<h4 class="page-title"><strong>News</strong></h4>
+		<h4 class="page-title theme-color"><strong>News</strong></h4>
 		<br>
 		<div class="news-post">
 			<div class="published font-italic mr-2">Apr 2020</div>-

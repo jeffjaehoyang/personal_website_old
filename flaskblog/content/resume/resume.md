@@ -2,7 +2,7 @@ author: Jeff Yang
 title: Resume
 category: None
 
-<h4>Education</h4>
+<h5>Education</h5>
 <hr>
 **Northwestern University**	(Expected Graduation: 06/2021)  
 <ul>
@@ -10,7 +10,7 @@ category: None
 	<li>Programming Coursework: Design & Analysis of Algorithms, Computer Networking, Programming Languages, Computer Systems, Introduction to Artificial Intelligence</li>
 </ul>
 <br>
-<h4>Employment</h4>
+<h5>Employment</h5>
 <hr>
 
 **Esri** (06/2020 - 09/2020)  
@@ -37,7 +37,7 @@ Software Engineer, Intern
 	<li><strong>Leveraged Knowledge in</strong> Git, Django, JavaScript, Unit Testing, PostgreSQL, and debugged using Python Debugger</li>
 </ul>
 <br>
-<h4>Software Projects</h4> 
+<h5>Software Projects</h5> 
 <hr>
 
 <strong>Sublets.nu: [https://www.sublets.nu](https://www.sublets.nu) (Founder & Lead Developer)</strong>
@@ -72,7 +72,7 @@ Software Engineer, Intern
 	<li><strong>Utilized:</strong> Python, Cron, IMAP protocol</li>
 </ul>
 <br>
-<h4>Skills</h4>
+<h5>Skills</h5>
 <hr>
 <strong>Proficient in: </strong> Python (Django, Flask), JavaScript (React), HTML/CSS, Git  
-<strong>Familiar with: </strong> SQL, C++, Java, Go 
+<strong>Familiar with: </strong> SQL, C++, TypeScript, Java, Go 

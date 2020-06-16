@@ -14,8 +14,10 @@ category: None
 <hr>
 
 **Esri** (06/2020 - 09/2020)  
-Incoming Software Engineer, Intern  
-Operations Dashboard Team
+Software Engineer, Intern (*Remote*)  
+<ul>
+	<li>ArcGIS Dashboards Team</li>
+</ul>
 
 **Knowru Limited** (07/2019 - 08/2019)  
 Software Engineer, Intern  

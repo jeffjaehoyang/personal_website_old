@@ -11,7 +11,11 @@
 	<div class="go-back text-right">
 		<a href="{{ url_for('blog')}}" role="button">&#8592;&nbsp;back</a>	
 	</div>
-	<div id="disqus_thread" style="margin-top: 3em;"></div>
+	<div id="commento"></div>
+	<script defer
+		src="https://cdn.commento.io/js/commento.js">
+	</script>
+	<!-- <div id="disqus_thread" style="margin-top: 3em;"></div>
 	<script>
 		const currentPostTitle = '{{ post.title }}';
 		var disqus_config = function () {
@@ -26,5 +30,5 @@
 		(d.head || d.body).appendChild(s);
 		})();
 	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
 {% endblock %} 

@@ -11,24 +11,27 @@
 	<div class="go-back text-right">
 		<a href="{{ url_for('blog')}}" role="button">&#8592;&nbsp;back</a>	
 	</div>
-	<div id="commento"></div>
+	<hr>
+	<div class="blog-post-footer col-md-12">
+		<div style="display: flex; align-items: center;">
+			<img
+				class="blog-post-img img-fluid" 
+				src="../static/upload/jeffyang.png" 
+			>
+			<div class="blog-post-self-intro">
+				<strong>Jeff Yang</strong>
+				<a class="footer footer-linkedin" href="https://www.linkedin.com/in/jaeho-yang/" style="color: #3f51b5;">
+					@jeffyang
+				</a>
+				<p>
+					CS '21 @Northwestern. I blog about web development, ideas, tutorials, and my development progress as an aspiring software engineer.
+				</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div id="commento" style="margin-top: 3em;"></div>
 	<script defer
 		src="https://cdn.commento.io/js/commento.js">
 	</script>
-	<!-- <div id="disqus_thread" style="margin-top: 3em;"></div>
-	<script>
-		const currentPostTitle = '{{ post.title }}';
-		var disqus_config = function () {
-		this.page.url = window.location;  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = currentPostTitle; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-		};
-		
-		(function() { // DON'T EDIT BELOW THIS LINE
-		var d = document, s = d.createElement('script');
-		s.src = 'https://jeffyangme.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
 {% endblock %} 

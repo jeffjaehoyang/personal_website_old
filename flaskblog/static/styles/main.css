@@ -29,10 +29,28 @@ body {
   line-height: 1.8em;
 }
 
+.post-content h5, h6 {
+  margin-top: 3em;
+  font-weight: 600;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 code {
   background-color: var(--codeColor);
   padding: 3px 5px 3px 5px;
   border-radius: 0.3rem;
+}
+
+img[src*="#fluid"] {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 0.5rem;
 }
 
 .theme-color {

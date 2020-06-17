@@ -5,23 +5,15 @@ summary: Traversing the graph with purpose, with some help from Dijkstra.
 published: 2019-12-15
 minread: 7 min
 
-<br>
 In this post, I would like to take a slightly different approach and write about an algorithm that I learned about in a classroom setting. While taking a computer science course in data structures and algorithms this quarter, I found the graph data structure and related algorithms to be particularly fascinating, as graphs can be applied in real-life to represent virtually anything from friendships to geographic maps. Although far from being an expert on this topic, I am going to make an attempt to dissect perhaps the most famous graph algorithm and its practical application. Take a bow, introducing Dijkstra's algorithm and the single source shortest path problem.  
-<br>
-
 
 ##### 1. Single Source Shortest Path 
 Before we talk about the algorithm itself, let's first get a sense of what Dijkstra's algorithm is all about; what significant questions can Dijkstra's famous algorithm answer? Often referred to as the "Single source shortest path" problem, Dijkstra's algorithm is suitable for finding the shortest distance from a single vertex to all other vertices. Using the results Dijkstra's algorithm produces, we can also find the shortest path from a single vertex to a specific destination, say, vertex *f*.   
 
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/sssp.png" 
-    >
-</div>
+![A diagram of a graph denoting the start node and target node for finding the shortest path between two nodes](../../static/upload/sssp.png#fluid)
 
 The graph illustrated above might have you think "It doesn't seem that hard to manually find the shortest path from vertex *a* to *f* !" If that's the case, imagine a graph with hundreds of vertices and edges; would you still be willing to manually find the shortest path from *a* to *f* ? It would be possible, but extremely time-consuming. This is where Dijkstra's algorithm comes into play. With some help from Dijkstra, we can find the shortest path from a single vertex to every other *reachable* vertex in the graph, with relative ease.  
-<br>
+
 ##### 2. Dijkstra's Algorithm 
 Finally, we can start our dissection of Dijkstra's algorithm. If we simply try to memorize the code for the algorithm line by line, it will be difficult (at least for people with non-photographic memory, like me). The better approach would be to try and understand what repeated steps the algorithm goes through until it finishes processing the graph and returns. The following are the steps that Dijkstra's algorithm follows, until it exhausts the entire vertex set of a graph: 
 
@@ -72,7 +64,7 @@ def dijkstra(graph, source):
     #result packages dist and pred in a tuple       
     return (pred, dist)
 ```
-<br>
+
 Dijkstra's algorithm implemented as above does not directly give us the shortest path between two vertices. However, it does produce two valuable pieces of information, one of which can be carefully crafted to give us the *shortest path* between two vertices. Notice how the `dijkstra` function above returns a tuple containing `pred` and `dist`. The `pred` dictionary contains information on what node was visited before visiting each of the vertices while traversing the graph. The `dist` dictionary contains information on the distance from the starting point to each of the vertices in the graph. By working our way backwards in the `pred` dictionary, starting from the destination until we reach the starting point, it is possible to identify the *shortest path* from the source to destination. We will need the help of a stack to get the order correct. 
 
 ```python
@@ -116,30 +108,17 @@ example_graph = {
     'g': {}
 }
 ```
-<br>
+
 With the `shortest_path` function, we can now find the shortest path from a source node to a destination node. Note that Dijkstra's algorithm is not capable of finding the distance/shortest path between two nodes that are not connected.
 
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/sssp2.png" 
-    >
-</div>
+![A diagram that illustrates how the Dijkstra's algorithm would proceed to find the shortest path between two nodes.](../../static/upload/sssp2.png#fluid)
 
 The following is the result of running `dijkstra` and `shortest_path` functions inside my Python shell with the example graph provided above. Note that the `example_graph` provided in the code is an adjacency list representation of the graph shown above, but is implemented with a Python dictionary. 
 
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/dijkstra_demo.png" 
-        style="border-radius: 5px;"
-    >
-</div>
-<br>
+![A screenshot of my terminal showing the results of running Dijkstra's algorithm.](../../static/upload/dijkstra_demo.png#fluid)
 
 ##### 3. Limitations of Dijkstra's Algorithm 
 The Dijkstra's algorithm is not bullet proof, however. The most remarkable limitation of Dijkstra's algorithm is that it will not work as expected if there are negative edges in a graph. In order to find the shortest distance from one starting vertex to all connected vertices, Dijkstra relies on the fact that if all edges are non-negative, it is always true that adding an edge will never make a path shorter. Only when such an assumption can safely be made can Dijkstra's "greedy" approach to the problem remain intact with solving global optimality. If negative edges are introduced and such an assumption is no longer valid, Dijkstra's method of selecting a node with minimum known distance at each iteration will no longer guarantee a correct outcome. To overcome such limitations of Dijkstra's algorithm, we can use other algorithms such as the Bellman-Ford's algorithm and the Floyd-Warshall's algorithm, as needed. These may be subject to discussion in future posts.  
-<br>
 
 ##### 4. Conclusion
 Hopefully this blog post helped you gain a solid understanding of Dijkstra's algorithm and the single source shortest path problem. If there is anyone reading this post who is interested in learning the mathematical proof on the correctness of Dijkstra's famous algorithm, I found [this](https://web.engr.oregonstate.edu/~glencora/wiki/uploads/dijkstra-proof.pdf) helpful. 

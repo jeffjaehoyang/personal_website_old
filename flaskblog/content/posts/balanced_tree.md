@@ -5,35 +5,27 @@ published: 2019-11-09
 summary: How do we check if a binary tree is balanced or not? Explained in Python.
 minread: 8 min
 
-<br>
 This is the second post of the algorithms series, and this time I would like to share a classic algorithms problem related to binary trees. In this post, we are going to examine how to check if a binary tree is balanced.  
-<br>
+
 **Problem Statement:** Write a function that takes a root node of a tree as an input, and returns whether or not the tree is balanced. A balanced tree satisfies the following condition: the difference between depths of any two leaf nodes must be no greater than 1.  
-<br>
+
 **Problem Source**: Leetcode - [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)  
-<br>
+
 The problem statement itself may not paint a clear picture of what we are dealing with, so let us take a look at the following picture of a balanced binary tree. Notice that the depth of all leaf nodes differ by at most 1. 
 
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/root.png" 
-    >
-</div>
+![A diagram that represents a binary tree with a root node at the top.](../../static/upload/root.png#fluid)
 
-Hopefully, the picture above was enough to give you a clear idea of what a balanced binary tree looks like. Now, let's dive into solving the problem! We’ll go through it step by step.<br><br>
-1. We are interested in the *depth* of leaf nodes - nodes that don't have any child node
+Hopefully, the picture above was enough to give you a clear idea of what a balanced binary tree looks like. Now, let's dive into solving the problem! We’ll go through it step by step.  
+
+##### 1. We are interested in the *depth* of leaf nodes - nodes that don't have any child node
 
 At the end, we need to somehow keep track of the depth of the leaf nodes to determine if the tree is balanced. There can be different ways to approaching this problem at hand. I'm going to be implementing an iterative depth-first traversal of the tree to check the depth of leaf nodes.  
-<br>
+
 To visualize depth-first traversal, take a look at the following diagram:
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/root2.png" 
-    >
-</div>
-2. Do we necessarily have to traverse the *entire* tree, and check *all* the leaf nodes to definitively determine if a tree is balanced?  
+
+![A diagram that illustrates a depth-first traversal of a binary tree.](../../static/upload/root2.png#fluid)
+
+##### 2. Do we necessarily have to traverse the *entire* tree, and check *all* the leaf nodes to definitively determine if a tree is balanced?  
 
 Well, it *depends*. If a tree is in fact balanced, we will end up traversing the entire tree in *all* cases. There's no escaping that. However, if a tree is not balanced, we can optimize our code so that we can just return `False` as soon as we figure out that there exists a leaf node that is more than a level deeper in depth than another leaf node.  
 
@@ -82,17 +74,15 @@ def check_balanced(root):
     #if we haven't had an issue this far, it's safe to return True!
     return True
 ```
-<br>
+
 **Time Complexity**: O(n)  
-*Explanation:* Worst case, we are going to have to traverse through the entire tree, which has *n* nodes.<br>  
+*Explanation:* Worst case, we are going to have to traverse through the entire tree, which has *n* nodes.    
+
 **Space Complexity**: O(n)  
 *Explanation:* It's possible to think our algorithm yields a space complexity of O(log n), since our auxiliary stack will have at most an entire path of nodes from root to leaf in it. The latter part is correct: our auxiliary stack will have at most an entire path of nodes from root to leaf node. But, a binary tree doesn't necessarily guarantee that it will in fact look like a *tree*. In the worst case where the tree is completely skewed, we can effectively have a data structure that is no different from a linked list. In that case, our stack will grow to a size proportionate to the size of the enitre tree. So in the worst case, our space complexity is O(n).  
 
 This diagram of a skewed tree will help your understanding:  
-<div class="container text-center">
-    <img
-        class="img-fluid" 
-        src="../../static/upload/root3.png" 
-    >
-</div>
+
+![A diagram that represents a skewed tree.](../../static/upload/root3.png#fluid)
+
 And with that, we are done! Hopefully this post gave you a clear idea of how to determine if a binary tree is balanced, and how efficient our algorithm is in terms of time and memory. 

@@ -349,10 +349,6 @@ a.footer:hover {
   background-color: white;
 }
 
-.contact-page {
-  padding: 5em 0em 10em 0em;
-}
-
 .home-recent-posts {
   margin-bottom: 60px;
 }
@@ -405,4 +401,16 @@ a.footer:hover {
 
 button:focus {
   outline: 0;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  border: 1px solid grey;
+  width: 100%;
+  min-height: 50vh;
+  padding: 1em;
 }
